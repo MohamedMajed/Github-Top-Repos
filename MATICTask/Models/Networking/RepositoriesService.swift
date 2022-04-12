@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NetworkLayer {
+class RepositoryService {
   
     func getRepositories(completion: @escaping ([Repository], Error?) -> Void ){
        

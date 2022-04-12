@@ -19,6 +19,7 @@
 		E8B2A9C928035DF50077D750 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B2A9C728035DF50077D750 /* Main.storyboard */; };
 		E8B2A9CB28035DF80077D750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B2A9CA28035DF80077D750 /* Assets.xcassets */; };
 		E8B2A9CE28035DF80077D750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B2A9CC28035DF80077D750 /* LaunchScreen.storyboard */; };
+		E8C04D4528063333005FD77E /* RepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C04D4428063333005FD77E /* RepositoryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		E8B2A9CA28035DF80077D750 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8B2A9CD28035DF80077D750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8B2A9CF28035DF80077D750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8C04D4428063333005FD77E /* RepositoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 		E8B2A9C028035DF50077D750 /* MATICTask */ = {
 			isa = PBXGroup;
 			children = (
+				E8C04D4328063303005FD77E /* ViewModel */,
 				E896C5BC2804B83D000983C6 /* Extentions */,
 				E896C5BA2804B61D000983C6 /* Core */,
 				E896C5BB2804B638000983C6 /* Resources */,
@@ -176,6 +179,14 @@
 				E8B2A9CF28035DF80077D750 /* Info.plist */,
 			);
 			path = MATICTask;
+			sourceTree = "<group>";
+		};
+		E8C04D4328063303005FD77E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E8C04D4428063333005FD77E /* RepositoryViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8C04D4528063333005FD77E /* RepositoryViewModel.swift in Sources */,
 				E896C5BE2804B950000983C6 /* UITableView+Extentions.swift in Sources */,
 				E8B2A9C228035DF50077D750 /* AppDelegate.swift in Sources */,
 				E896C5C82804DD31000983C6 /* RepositoryTableViewCell.swift in Sources */,

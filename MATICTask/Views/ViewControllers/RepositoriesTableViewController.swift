@@ -16,7 +16,7 @@ class RepositoriesTableViewController: UITableViewController {
         super.viewDidLoad()
 
         tableView.register(cellType: RepositoryTableViewCell.self)
-        let repoService = NetworkLayer()
+        let repoService = RepositoryService()
         
         repoService.getRepositories { (repos, error) in
             print(repos)
