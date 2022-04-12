@@ -1,0 +1,6 @@
+module Pods_MATICTask {
+  umbrella header "Pods-MATICTask-umbrella.h"
+
+  export *
+  module * { export * }
+}
