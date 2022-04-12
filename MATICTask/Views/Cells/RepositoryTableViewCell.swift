@@ -12,7 +12,7 @@ class RepositoryTableViewCell: UITableViewCell {
     @IBOutlet weak var ownerImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var repositoryNameLabel: UILabel!
-    @IBOutlet weak var repositoryDescription: UITextField!
+    @IBOutlet weak var repositoryDescriptionLabel: UILabel!
     @IBOutlet weak var numberOfStars: UILabel!
     @IBOutlet weak var numberOfIssues: UILabel!
     @IBOutlet weak var timeIntervalLabel: UILabel!

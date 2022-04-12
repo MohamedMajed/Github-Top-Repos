@@ -18,6 +18,7 @@ struct RepositoryResponse: Codable {
 struct Repository: Codable {
     let id: Int
     let name: String
+    let owner: Owner?
     let description: String?
     let stargazersCount: Int
     let openIssuesCount: Int
@@ -26,13 +27,8 @@ struct Repository: Codable {
 
 // MARK: - Owner
 struct Owner: Codable {
-    let login: String
-    let id: Int
-    let avatarURL: String
+    let login: String?
+    let id: Int?
+    let avatarUrl: String?
    
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case avatarURL = "avatar_url"
-    }
 }

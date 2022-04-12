@@ -49,17 +49,39 @@ class RepositoriesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryTableViewCell", for: indexPath) as! RepositoryTableViewCell
 
         cell.repositoryNameLabel.text = arrayOfrepos[indexPath.row].name
-        cell.repositoryDescription.text = arrayOfrepos[indexPath.row].description
+        cell.repositoryDescriptionLabel.text = arrayOfrepos[indexPath.row].description
         cell.numberOfStars.text = String(arrayOfrepos[indexPath.row].stargazersCount)
         cell.numberOfIssues.text = String(arrayOfrepos[indexPath.row].openIssuesCount)
-//        let url = URL(string: arrayOfrepos[indexPath.row])
-//        movieImage.kf.setImage(with: url)
-
+        cell.usernameLabel.text = arrayOfrepos[indexPath.row].owner?.login
+        let url = URL(string: arrayOfrepos[indexPath.row].owner?.avatarUrl ?? "")
+        cell.ownerImageView.kf.setImage(with: url)
+//        let url = URL(string: arrayOfrepos[indexPath.row].owner?.avatarURL ?? "")
+//        let processor = DownsamplingImageProcessor(size: cell.ownerImageView.bounds.size)
+//                     |> RoundCornerImageProcessor(cornerRadius: 20)
+//        cell.ownerImageView.kf.indicatorType = .activity
+//        cell.ownerImageView.kf.setImage(
+//            with: url,
+//            placeholder: UIImage(named: "placeholderImage"),
+//            options: [
+//                .processor(processor),
+//                .scaleFactor(UIScreen.main.scale),
+//                .transition(.fade(1)),
+//                .cacheOriginalImage
+//            ])
+//        {
+//            result in
+//            switch result {
+//            case .success(let value):
+//                print("Task done for: \(value.source.url?.absoluteString ?? "")")
+//            case .failure(let error):
+//                print("Job failed: \(error.localizedDescription)")
+//            }
+//        }
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 140
     }
 
     /*

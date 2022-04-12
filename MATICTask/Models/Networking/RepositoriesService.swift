@@ -17,8 +17,6 @@ class NetworkLayer {
 
         let request = URLRequest(url: url!)
 
-        //let session = URLSession(configuration: URLSessionConfiguration.default)
-
         let _ = URLSession.shared.dataTask(with: request) { data, response, error in
             do {
                 if let data = data {
@@ -36,19 +34,5 @@ class NetworkLayer {
         }.resume()
 
     }
-//    class func requestBrands(completionHandler: @escaping ([Brand], Error?) -> Void ) {
-//        let _ = URLSession.shared.dataTask(with: EndPoint.brandsEndPoint.url) { data, response, error in
-//            guard let data = data else {
-//                completionHandler([], error)
-//                return
-//            }
-//            let decoder = JSONDecoder()
-//            do {
-//                let json = try decoder.decode(Brands.self, from: data)
-//                completionHandler(json.smart_collections, nil)
-//            } catch {
-//                print(error.localizedDescription)
-//            }
-//        }.resume()
 }
 
