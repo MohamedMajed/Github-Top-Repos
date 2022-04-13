@@ -10,7 +10,7 @@ import Foundation
 class RepositoryViewMode: NSObject{
     
     var repositoryService:RepositoryService!
-    var repositoryData:[Repository]{
+    var repositoryData:[Repository]! {
         didSet{
             
             self.bindRepositoriesViewModelToView()
@@ -32,7 +32,7 @@ class RepositoryViewMode: NSObject{
         super .init()
         self.repositoryService = RepositoryService()
         self.getRepositoriesFromAPI()
-    } 
+    }  
     
     func getRepositoriesFromAPI(){
         

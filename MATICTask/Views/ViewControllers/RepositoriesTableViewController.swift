@@ -10,26 +10,44 @@ import Kingfisher
 
 class RepositoriesTableViewController: UITableViewController {
     
-    var arrayOfrepos = [Repository]()
+    var repositories: [Repository] = [Repository]()
+    let repositoryViewModel = RepositoryViewMode()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tableView.register(cellType: RepositoryTableViewCell.self)
-        let repoService = RepositoryService()
         
-        repoService.getRepositories { (repos, error) in
-            print(repos)
-            self.arrayOfrepos = repos
-            print(self.arrayOfrepos)
+        tableView.register(cellType: RepositoryTableViewCell.self)
+        
+        repositoryViewModel.bindRepositoriesViewModelToView = {
             
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+            self.onSuccessUpdateView()
         }
         
+        repositoryViewModel.bindViewModelErrorToView = {
+            
+            self.onFailUpdateView()
+        }
+    }
+    
+    func onSuccessUpdateView(){
         
+        repositories = repositoryViewModel.repositoryData
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    func onFailUpdateView(){
         
+        let alert = UIAlertController(title: "Error 404", message: repositoryViewModel.showError, preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Ok", style: .default) {
+            (UIAlertAction) in
+            
+        }
+        
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
     }
 
     // MARK: - Table view data source
@@ -41,49 +59,28 @@ class RepositoriesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return arrayOfrepos.count
+        return repositories.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryTableViewCell", for: indexPath) as! RepositoryTableViewCell
 
-        cell.repositoryNameLabel.text = arrayOfrepos[indexPath.row].name
-        cell.repositoryDescriptionLabel.text = arrayOfrepos[indexPath.row].description
-        cell.numberOfStars.text = String(arrayOfrepos[indexPath.row].stargazersCount)
-        cell.numberOfIssues.text = String(arrayOfrepos[indexPath.row].openIssuesCount)
-        cell.usernameLabel.text = arrayOfrepos[indexPath.row].owner?.login
-        let url = URL(string: arrayOfrepos[indexPath.row].owner?.avatarUrl ?? "")
+        cell.repositoryNameLabel.text = repositoryViewModel.repositoryData[indexPath.row].name
+        cell.repositoryDescriptionLabel.text = repositoryViewModel.repositoryData[indexPath.row].description
+        cell.numberOfStars.text = String(repositoryViewModel.repositoryData[indexPath.row].stargazersCount)
+        cell.numberOfIssues.text = String(repositoryViewModel.repositoryData[indexPath.row].openIssuesCount)
+        cell.usernameLabel.text = repositoryViewModel.repositoryData[indexPath.row].owner?.login
+        let url = URL(string: repositoryViewModel.repositoryData[indexPath.row].owner?.avatarUrl ?? "")
         cell.ownerImageView.kf.setImage(with: url)
-//        let url = URL(string: arrayOfrepos[indexPath.row].owner?.avatarURL ?? "")
-//        let processor = DownsamplingImageProcessor(size: cell.ownerImageView.bounds.size)
-//                     |> RoundCornerImageProcessor(cornerRadius: 20)
-//        cell.ownerImageView.kf.indicatorType = .activity
-//        cell.ownerImageView.kf.setImage(
-//            with: url,
-//            placeholder: UIImage(named: "placeholderImage"),
-//            options: [
-//                .processor(processor),
-//                .scaleFactor(UIScreen.main.scale),
-//                .transition(.fade(1)),
-//                .cacheOriginalImage
-//            ])
-//        {
-//            result in
-//            switch result {
-//            case .success(let value):
-//                print("Task done for: \(value.source.url?.absoluteString ?? "")")
-//            case .failure(let error):
-//                print("Job failed: \(error.localizedDescription)")
-//            }
-//        }
+
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
     }
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
