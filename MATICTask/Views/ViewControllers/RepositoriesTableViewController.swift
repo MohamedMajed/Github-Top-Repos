@@ -11,15 +11,16 @@ import Kingfisher
 class RepositoriesTableViewController: UITableViewController {
     
     var repositories: [Repository] = [Repository]()
-    let repositoryViewModel = RepositoryViewMode()
+    let repositoryViewModel = RepositoryViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(cellType: RepositoryTableViewCell.self)
-        tableView.backgroundView = UIImageView(image: UIImage(named: "Background1"))
-        tableView.separatorStyle = .none
-        
+        configureTableView()
+        subscribeToViewModelEvents()
+    }
+  
+    func subscribeToViewModelEvents() {
         
         repositoryViewModel.bindRepositoriesViewModelToView = {
             
@@ -32,7 +33,9 @@ class RepositoriesTableViewController: UITableViewController {
         }
     }
     
-    func onSuccessUpdateView(){
+    // MARK: - Update Table view
+    
+    func onSuccessUpdateView() {
         
         repositories = repositoryViewModel.repositoryData
         DispatchQueue.main.async {
@@ -40,7 +43,7 @@ class RepositoriesTableViewController: UITableViewController {
         }
     }
     
-    func onFailUpdateView(){
+    func onFailUpdateView() {
         
         let alert = UIAlertController(title: "Error 404", message: repositoryViewModel.showError, preferredStyle: .alert)
         
@@ -51,6 +54,15 @@ class RepositoriesTableViewController: UITableViewController {
         
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    // MARK: - Configure Table view
+    
+    func configureTableView() {
+        
+        tableView.register(cellType: RepositoryTableViewCell.self)
+        tableView.backgroundView = UIImageView(image: UIImage(named: "Background2"))
+        tableView.separatorStyle = .none
     }
 
     // MARK: - Table view data source
@@ -68,24 +80,20 @@ class RepositoriesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withType: RepositoryTableViewCell.self, for: indexPath)
-        cell.selectionStyle = .none
 
-        cell.repositoryNameLabel.text = repositoryViewModel.repositoryData[indexPath.row].name
-        cell.repositoryDescriptionLabel.text = repositoryViewModel.repositoryData[indexPath.row].description
-        cell.numberOfStars.text = String((repositoryViewModel.repositoryData[indexPath.row].stargazersCount)/1000.0) + "K ⭐"
-        cell.numberOfIssues.text = String(repositoryViewModel.repositoryData[indexPath.row].openIssuesCount)
-        cell.usernameLabel.text = repositoryViewModel.repositoryData[indexPath.row].owner?.login
-        let url = URL(string: repositoryViewModel.repositoryData[indexPath.row].owner?.avatarUrl ?? "")
-        cell.ownerImageView.kf.setImage(with: url)
+        cell.selectionStyle = .none
+        cell.viewContainer.layer.cornerRadius = cell.viewContainer.frame.height / 15
+
+        let repository = repositoryViewModel.repositoryData[indexPath.row]
+
+        cell.configureCell(repositoryName: repository.name, repositoryDescription: repository.description ?? "", username: repository.owner?.login ?? "", avatarURL: repository.owner?.avatarUrl ?? "", numberOfStars: repository.stargazersCount, numberOfIssues: repository.openIssuesCount)
         
-        cell.viewContainer.layer.cornerRadius = cell.viewContainer.frame.height / 5
-    
         return cell
     }
     
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 140
-//    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
+    }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)

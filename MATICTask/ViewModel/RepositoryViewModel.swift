@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RepositoryViewMode: NSObject{
+class RepositoryViewModel: NSObject{
     
     var repositoryService:RepositoryService!
     var repositoryData:[Repository]! {
