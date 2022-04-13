@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Repositories-->
+        <!--Home-->
         <scene sceneID="wjj-My-kBo">
             <objects>
                 <tableViewController id="IdN-bj-fqz" customClass="RepositoriesTableViewController" customModule="MATICTask" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                             <outlet property="delegate" destination="IdN-bj-fqz" id="kzM-db-a9o"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Repositories" id="j3H-v3-UDd"/>
+                    <navigationItem key="navigationItem" title="Home" id="j3H-v3-UDd"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dAd-iS-45g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -20,7 +20,7 @@ struct Repository: Codable {
     let name: String
     let owner: Owner?
     let description: String?
-    let stargazersCount: Int
+    let stargazersCount: Double
     let openIssuesCount: Int
     let createdAt, updatedAt: Date
 }
