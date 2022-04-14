@@ -59,7 +59,7 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
         
         tableView.register(cellType: RepositoryTableViewCell.self)
         tableView.prefetchDataSource = self
-        tableView.backgroundView = UIImageView(image: UIImage(named: "Background2"))
+        tableView.backgroundView = UIImageView(image: UIImage(named: "Background3"))
         tableView.separatorStyle = .none
     }
 
@@ -92,7 +92,7 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160
+        return 190
     }
     
 //    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

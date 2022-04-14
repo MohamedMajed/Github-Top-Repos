@@ -22,47 +22,52 @@ class RepositoryTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        addShadowToImageContainer()
-        addShadowToOwnerImage()
-        viewContainer.backgroundColor = UIColor.gray.withAlphaComponent(0.75)
-        viewContainer.isOpaque = false
-        viewContainer.layer.shadowColor = UIColor.gray.cgColor
-        viewContainer.layer.shadowOpacity = 1.0
+        updateImageContainer()
+        updateOwnerImage()
+        updateViewContainer()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         
     }
     
     // MARK: - Configure Table view cell
     
-    func configureCell(repositoryName: String, repositoryDescription: String, username: String, avatarURL: String, numberOfStars: Double, numberOfIssues: Int){
+    func configureCell(repositoryName: String, repositoryDescription: String, username: String, avatarURL: String, numberOfStars: Double, numberOfIssues: Int) {
         
         repositoryNameLabel.text = repositoryName
         repositoryDescriptionLabel.text = repositoryDescription
         usernameLabel.text = username
         numberOfStarsLabel.text = (String((numberOfStars)/1000.0) + "K ⭐")
-        numberOfIssuesLabel.text = String(numberOfIssues)
+        numberOfIssuesLabel.text = String(numberOfIssues) + " 🔴"
         let url = URL(string: avatarURL)
         ownerImageView.kf.setImage(with: url)
     }
     
-    func addShadowToImageContainer() {
-        imageContainer.layer.backgroundColor = UIColor.white.cgColor
-        imageContainer.layer.shadowColor = UIColor.black.cgColor
-        imageContainer.layer.shadowOpacity = 0.3
-        imageContainer.layer.masksToBounds = false
-        imageContainer.layer.shadowOffset = .zero
-        imageContainer.layer.shadowRadius = 3
+    func updateImageContainer() {
+//        imageContainer.layer.backgroundColor = UIColor.white.cgColor
+//        imageContainer.layer.shadowColor = UIColor.black.cgColor
+//        imageContainer.layer.shadowOpacity = 0.3
+//        imageContainer.layer.masksToBounds = false
+//        imageContainer.layer.shadowOffset = .zero
+//        imageContainer.layer.shadowRadius = 3
         imageContainer.layer.cornerRadius = 55
-        imageContainer.layer.backgroundColor = UIColor.gray.cgColor
+//        imageContainer.layer.backgroundColor = UIColor.gray.cgColor
     }
    
-    func addShadowToOwnerImage() {
-        ownerImageView.layer.shadowOpacity = 1
-        ownerImageView.layer.shadowRadius = 7
+    func updateOwnerImage() {
+//        ownerImageView.layer.shadowOpacity = 1
+//        ownerImageView.layer.shadowRadius = 7
         ownerImageView.layer.cornerRadius = 52.5
+//        ownerImageView.layer.borderWidth = 2
+//        ownerImageView.layer.borderColor = UIColor.gray.cgColor
+    }
+    
+    func updateViewContainer() {
+        viewContainer.backgroundColor = UIColor.gray.withAlphaComponent(0.35)
+        viewContainer.isOpaque = false
+        viewContainer.layer.shadowColor = UIColor.gray.cgColor
+        viewContainer.layer.shadowOpacity = 1.0
     }
 }
