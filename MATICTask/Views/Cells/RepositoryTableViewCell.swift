@@ -34,7 +34,7 @@ class RepositoryTableViewCell: UITableViewCell {
     
     // MARK: - Configure Table view cell
     
-    func configureCell(repositoryName: String, repositoryDescription: String, username: String, avatarURL: String, numberOfStars: Double, numberOfIssues: Int) {
+    func configureCell(repositoryName: String, repositoryDescription: String, username: String, avatarURL: String, numberOfStars: Double, numberOfIssues: Int, updatedDate: String) {
         
         repositoryNameLabel.text = repositoryName
         repositoryDescriptionLabel.text = repositoryDescription

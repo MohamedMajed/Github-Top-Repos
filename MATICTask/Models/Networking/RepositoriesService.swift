@@ -25,10 +25,14 @@ class RepositoryService {
                     decoder.keyDecodingStrategy = .convertFromSnakeCase
                     let json = try decoder.decode(RepositoryResponse.self, from: data)
                    // print(json.items)
-                    completion(json.items, nil)
+                    DispatchQueue.main.async {
+                        completion(json.items, nil)
+                    }
                 }
-            }catch{
-                completion([], error)
+            } catch {
+                DispatchQueue.main.async {
+                    completion([], error)
+                }
                 print(error.localizedDescription)
             }
         }.resume()

@@ -34,10 +34,8 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
     // MARK: - Update Table view
     
     func onSuccessUpdateView() {
-        
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
+    
+            tableView.reloadData()
     }
     
     func onFailUpdateView() {
@@ -85,8 +83,20 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
         cell.viewContainer.layer.cornerRadius = cell.viewContainer.frame.height / 15
 
         let repository = repositoryViewModel.repositoryData[indexPath.row]
+        
+        let exampleDate = Date().addingTimeInterval(-2000000)
 
-        cell.configureCell(repositoryName: repository.name, repositoryDescription: repository.description ?? "", username: repository.owner?.login ?? "", avatarURL: repository.owner?.avatarUrl ?? "", numberOfStars: repository.stargazersCount, numberOfIssues: repository.openIssuesCount)
+        // ask for the full relative date
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .full
+
+        // get exampleDate relative to the current date
+        let relativeDate = formatter.localizedString(for: exampleDate, relativeTo: Date())
+
+        // print it out
+        print("Relative date is: \(relativeDate)")
+
+        cell.configureCell(repositoryName: repository.name, repositoryDescription: repository.description ?? "", username: repository.owner?.login ?? "", avatarURL: repository.owner?.avatarUrl ?? "", numberOfStars: repository.stargazersCount, numberOfIssues: repository.openIssuesCount, updatedDate: "")
         
         return cell
     }
@@ -105,4 +115,13 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
 //    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
 //        <#code#>
 //    }
+    
+//    let calendar = Calendar.current
+
+//    // Replace the hour (time) of both dates with 00:00
+//    let date1 = calendar.startOfDay(for: firstDate)
+//    let date2 = calendar.startOfDay(for: secondDate)
+//
+//    let components = calendar.dateComponents([.day], from: date1, to: date2)
+//    return components.day
 }
