@@ -9,7 +9,7 @@ import Foundation
 
 class RepositoryService {
   
-    func fetchRepositories(atPage: Int, completion: @escaping ([Repository], Error?) -> Void ){
+    func fetchRepositories(atPage: Int, completion: @escaping ([Repository]?, Error?) -> Void ){
        
         let URLString = "https://api.github.com/search/repositories?q=created:>2017-10-22&sort=stars&order=desc&page=\(atPage)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
 

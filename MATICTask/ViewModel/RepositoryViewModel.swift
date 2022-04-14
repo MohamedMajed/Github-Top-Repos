@@ -7,20 +7,20 @@
 
 import Foundation
 
-class RepositoryViewModel: NSObject{
+class RepositoryViewModel {
     
-    var repositoryService:RepositoryService!
+    var repositoryService: RepositoryService
     var currentPage: Int = 1
     var isFetchingRepositories = false
-    var repositoryData:[Repository]! {
-        didSet{
+    var repositoryData: [Repository] = [] {
+        didSet {
             
             self.bindRepositoriesViewModelToView()
         }
     }
     
-    var showError: String!{
-        didSet{
+    var showError: String! {
+        didSet {
             
             self.bindViewModelErrorToView()
         }
@@ -29,14 +29,22 @@ class RepositoryViewModel: NSObject{
     var bindRepositoriesViewModelToView: (()->()) = {}
     var bindViewModelErrorToView: (()->()) = {}
     
-    override init() {
-        
-        super .init()
+    init() {
         self.repositoryService = RepositoryService()
-        self.getRepositoriesFromAPI()
-    }  
+        self.fetchRepositoriesFromAPI()
+    }
     
-    func getRepositoriesFromAPI(){
+    func prefetchRows(at indexPaths: [IndexPath]) {
+        for index in indexPaths {
+            if index.row >= repositoryData.count - 5 && !isFetchingRepositories {
+                fetchRepositoriesFromAPI()
+                break
+            }
+        }
+    }
+    
+    func fetchRepositoriesFromAPI() {
+        
         isFetchingRepositories = true
         repositoryService.fetchRepositories(atPage: currentPage, completion: { (repositoryData, error) in
             if let error = error {
@@ -44,13 +52,12 @@ class RepositoryViewModel: NSObject{
                 let message = error.localizedDescription
                 self.showError = message
                 
-            }else{
+            } else {
                 print("Page Number : \(self.currentPage)")
-                self.repositoryData = repositoryData
-//                self.currentPage += 1
-//                self.isFetchingRepositories = false
+                self.repositoryData.append(contentsOf: repositoryData ?? [])
+                self.currentPage += 1
             }
+            self.isFetchingRepositories = false
         })
     }
-    
 }

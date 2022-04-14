@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6AC7FF4939E1CD8268C05027 /* libPods-MATICTask.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F664E0EFCB75866984CCDA /* libPods-MATICTask.a */; };
+		E830BC522807E9A5009BF47E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E830BC512807E9A5009BF47E /* Assets.xcassets */; };
 		E896C5BE2804B950000983C6 /* UITableView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896C5BD2804B950000983C6 /* UITableView+Extentions.swift */; };
 		E896C5C32804DA77000983C6 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896C5C22804DA77000983C6 /* Repository.swift */; };
 		E896C5C82804DD31000983C6 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896C5C62804DD31000983C6 /* RepositoryTableViewCell.swift */; };
@@ -25,6 +26,7 @@
 		0BEEFD10F84A02B82F5EE1CE /* Pods-MATICTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATICTask.release.xcconfig"; path = "Target Support Files/Pods-MATICTask/Pods-MATICTask.release.xcconfig"; sourceTree = "<group>"; };
 		144DB63B17F6CDA27DA30411 /* Pods-MATICTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATICTask.debug.xcconfig"; path = "Target Support Files/Pods-MATICTask/Pods-MATICTask.debug.xcconfig"; sourceTree = "<group>"; };
 		82F664E0EFCB75866984CCDA /* libPods-MATICTask.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MATICTask.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E830BC512807E9A5009BF47E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E896C5BD2804B950000983C6 /* UITableView+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extentions.swift"; sourceTree = "<group>"; };
 		E896C5C22804DA77000983C6 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		E896C5C62804DD31000983C6 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -69,6 +71,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E830BC4E2807BEE6009BF47E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E8B2A9C728035DF50077D750 /* Main.storyboard */,
+				E8B2A9CC28035DF80077D750 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		E89068352803796D00067110 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +101,7 @@
 		E896C5BB2804B638000983C6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E830BC512807E9A5009BF47E /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -105,10 +117,9 @@
 		E896C5BF2804B9CC000983C6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E830BC4E2807BEE6009BF47E /* Storyboards */,
 				E896C5CC2804DDDE000983C6 /* ViewControllers */,
 				E896C5C52804DCF3000983C6 /* Cells */,
-				E8B2A9C728035DF50077D750 /* Main.storyboard */,
-				E8B2A9CC28035DF80077D750 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -247,6 +258,7 @@
 			files = (
 				E8B2A9CE28035DF80077D750 /* LaunchScreen.storyboard in Resources */,
 				E8B2A9C928035DF50077D750 /* Main.storyboard in Resources */,
+				E830BC522807E9A5009BF47E /* Assets.xcassets in Resources */,
 				E896C5C92804DD31000983C6 /* RepositoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

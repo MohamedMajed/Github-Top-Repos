@@ -9,9 +9,7 @@ import UIKit
 import Kingfisher
 
 class RepositoriesTableViewController: UITableViewController, UITableViewDataSourcePrefetching {
-    var repositories: [Repository] = [Repository]()
-    let repositoryViewModel = RepositoryViewModel()
-//    var currentPage: Int = 1
+    private let repositoryViewModel = RepositoryViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,11 +35,8 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
     
     func onSuccessUpdateView() {
         
-        repositories = repositoryViewModel.repositoryData
         DispatchQueue.main.async {
             self.tableView.reloadData()
-            self.repositoryViewModel.currentPage += 1
-            self.repositoryViewModel.isFetchingRepositories = false
         }
     }
     
@@ -72,24 +67,14 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         
-        for index in indexPaths {
-            if index.row >= repositories.count - 5 && !repositoryViewModel.isFetchingRepositories {
-                repositoryViewModel.getRepositoriesFromAPI()
-                break
-            }
-        }
+        repositoryViewModel.prefetchRows(at: indexPaths)
     }
     
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        
-        return 1
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return repositories.count
+        return repositoryViewModel.repositoryData.count
     }
 
     
@@ -110,10 +95,14 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
         return 160
     }
     
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-        UIView.animate(withDuration: 0.4) {
-            cell.transform = CGAffineTransform.identity
-        }
-    }
+//    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        cell.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+//        UIView.animate(withDuration: 0.4) {
+//            cell.transform = CGAffineTransform.identity
+//        }
+//    }
+    
+//    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        <#code#>
+//    }
 }
