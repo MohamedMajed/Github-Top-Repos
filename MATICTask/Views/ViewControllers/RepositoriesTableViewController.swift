@@ -8,10 +8,10 @@
 import UIKit
 import Kingfisher
 
-class RepositoriesTableViewController: UITableViewController {
-    
+class RepositoriesTableViewController: UITableViewController, UITableViewDataSourcePrefetching {
     var repositories: [Repository] = [Repository]()
     let repositoryViewModel = RepositoryViewModel()
+//    var currentPage: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +40,8 @@ class RepositoriesTableViewController: UITableViewController {
         repositories = repositoryViewModel.repositoryData
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            self.repositoryViewModel.currentPage += 1
+            self.repositoryViewModel.isFetchingRepositories = false
         }
     }
     
@@ -61,10 +63,23 @@ class RepositoriesTableViewController: UITableViewController {
     func configureTableView() {
         
         tableView.register(cellType: RepositoryTableViewCell.self)
+        tableView.prefetchDataSource = self
         tableView.backgroundView = UIImageView(image: UIImage(named: "Background2"))
         tableView.separatorStyle = .none
     }
 
+    // MARK: - Table view prefetch data source
+    
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        
+        for index in indexPaths {
+            if index.row >= repositories.count - 5 && !repositoryViewModel.isFetchingRepositories {
+                repositoryViewModel.getRepositoriesFromAPI()
+                break
+            }
+        }
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

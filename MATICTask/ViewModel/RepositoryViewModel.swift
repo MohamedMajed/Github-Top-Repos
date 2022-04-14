@@ -10,6 +10,8 @@ import Foundation
 class RepositoryViewModel: NSObject{
     
     var repositoryService:RepositoryService!
+    var currentPage: Int = 1
+    var isFetchingRepositories = false
     var repositoryData:[Repository]! {
         didSet{
             
@@ -35,16 +37,18 @@ class RepositoryViewModel: NSObject{
     }  
     
     func getRepositoriesFromAPI(){
-        
-        repositoryService.getRepositories(completion: { (repositoryData, error) in
+        isFetchingRepositories = true
+        repositoryService.fetchRepositories(atPage: currentPage, completion: { (repositoryData, error) in
             if let error = error {
                 
                 let message = error.localizedDescription
                 self.showError = message
                 
             }else{
-                
+                print("Page Number : \(self.currentPage)")
                 self.repositoryData = repositoryData
+//                self.currentPage += 1
+//                self.isFetchingRepositories = false
             }
         })
     }
