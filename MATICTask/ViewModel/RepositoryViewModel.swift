@@ -42,26 +42,25 @@ class RepositoryViewModel {
             }
         }
     }
-
+    
     func fetchRepositoriesFromAPI() {
         
         isFetchingRepositories = true
-        repositoryService.fetchRepositories(atPage: currentPage, completion: { (repositoryData, error) in
-            if let error = error {
-                
+        repositoryService.fetchRepositories(atPage: currentPage) { result in
+            switch result {
+            case .success(let repositories):
+                print("Page Number : \(self.currentPage)")
+                self.repositoryData.append(contentsOf: repositories ?? [])
+                if self.currentPage < 34 {
+                    self.currentPage += 1
+                }
+            case .failure(let error):
                 let message = error.localizedDescription
                 self.showError = message
-                
-            } else {
-                print("Page Number : \(self.currentPage)")
-                self.repositoryData.append(contentsOf: repositoryData ?? [])
-                if self.currentPage < 34 {
-                   self.currentPage += 1
-                }
+                print(error.localizedDescription)
             }
             self.isFetchingRepositories = false
-        })
+        }
     }
 }
-
 
