@@ -39,12 +39,10 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
     }
     
     func onFailUpdateView() {
-        
         let alert = UIAlertController(title: "Error 404", message: repositoryViewModel.showError, preferredStyle: .alert)
         
         let action = UIAlertAction(title: "Ok", style: .default) {
             (UIAlertAction) in
-            
         }
         
         alert.addAction(action)
@@ -54,7 +52,6 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
     // MARK: - Configure Table view
     
     func configureTableView() {
-        
         tableView.register(cellType: RepositoryTableViewCell.self)
         tableView.prefetchDataSource = self
         tableView.backgroundView = UIImageView(image: UIImage(named: "Background1"))
@@ -72,6 +69,7 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        print("--------------\(repositoryViewModel.repositoryData.count)")
         return repositoryViewModel.repositoryData.count
     }
 
@@ -90,7 +88,7 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
         
         var timeInterval = formatter.localizedString(from: dateComponents)
 
-        cell.configureCell(repositoryName: repository.name, repositoryDescription: repository.description ?? "", username: repository.owner?.login ?? "", avatarURL: repository.owner?.avatarUrl ?? "", numberOfStars: repository.stargazersCount, numberOfIssues: repository.openIssuesCount, updatedDate: timeInterval)
+        cell.configureCell(repositoryName: repository.name ?? "", repositoryDescription: repository.description ?? "", username: repository.owner?.login ?? "", avatarURL: repository.owner?.avatarUrl ?? "", numberOfStars: repository.stargazersCount, numberOfIssues: repository.openIssuesCount, updatedDate: timeInterval)
         
         return cell
     }
@@ -110,9 +108,5 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
                 tableView.tableFooterView = spinner
                 tableView.tableFooterView?.isHidden = false
     }
-    
-//    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-//        <#code#>
-//    }
-}
+  }
 }

@@ -10,14 +10,14 @@ import Foundation
 // MARK: - RepositoryResponse
 struct RepositoryResponse: Codable {
     let totalCount: Int?
-    let incompleteResults: Bool
-    let items: [Repository]
+    let incompleteResults: Bool?
+    let items: [Repository]?
 }
 
 // MARK: - Repository
 struct Repository: Codable {
     let id: Int
-    let name: String
+    let name: String?
     let owner: Owner?
     let description: String?
     let stargazersCount: Double

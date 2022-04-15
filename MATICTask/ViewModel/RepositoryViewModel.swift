@@ -36,7 +36,7 @@ class RepositoryViewModel {
     
     func prefetchRows(at indexPaths: [IndexPath]) {
         for index in indexPaths {
-            if index.row >= repositoryData.count - 5 && !isFetchingRepositories && currentPage < 34 {
+            if index.row >= repositoryData.count - 5 && !isFetchingRepositories && currentPage <= 10 {
                 fetchRepositoriesFromAPI()
                 break
             }
@@ -50,8 +50,8 @@ class RepositoryViewModel {
             switch result {
             case .success(let repositories):
                 print("Page Number : \(self.currentPage)")
-                self.repositoryData.append(contentsOf: repositories ?? [])
-                if self.currentPage < 34 {
+                if self.currentPage <= 10 {
+                    self.repositoryData.append(contentsOf: repositories ?? [])
                     self.currentPage += 1
                 }
             case .failure(let error):
