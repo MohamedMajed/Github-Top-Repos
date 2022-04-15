@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - RepositoryResponse
 struct RepositoryResponse: Codable {
-    let totalCount: Int
+    let totalCount: Int?
     let incompleteResults: Bool
     let items: [Repository]
 }
@@ -30,5 +30,4 @@ struct Owner: Codable {
     let login: String?
     let id: Int?
     let avatarUrl: String?
-   
 }

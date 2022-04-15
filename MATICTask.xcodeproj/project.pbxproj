@@ -14,13 +14,24 @@
 		E896C5C82804DD31000983C6 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896C5C62804DD31000983C6 /* RepositoryTableViewCell.swift */; };
 		E896C5C92804DD31000983C6 /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E896C5C72804DD31000983C6 /* RepositoryTableViewCell.xib */; };
 		E896C5CE2804DE98000983C6 /* RepositoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896C5CD2804DE98000983C6 /* RepositoriesTableViewController.swift */; };
-		E896C5D02804E375000983C6 /* RepositoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896C5CF2804E375000983C6 /* RepositoriesService.swift */; };
+		E896C5D02804E375000983C6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896C5CF2804E375000983C6 /* APIService.swift */; };
+		E89B0C73280A03CF00F9CADA /* APISeviceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B0C72280A03CF00F9CADA /* APISeviceTests.swift */; };
 		E8B2A9C228035DF50077D750 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B2A9C128035DF50077D750 /* AppDelegate.swift */; };
 		E8B2A9C428035DF50077D750 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B2A9C328035DF50077D750 /* SceneDelegate.swift */; };
 		E8B2A9C928035DF50077D750 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B2A9C728035DF50077D750 /* Main.storyboard */; };
 		E8B2A9CE28035DF80077D750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B2A9CC28035DF80077D750 /* LaunchScreen.storyboard */; };
 		E8C04D4528063333005FD77E /* RepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C04D4428063333005FD77E /* RepositoryViewModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E89B0C6B280A023600F9CADA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8B2A9B628035DF50077D750 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8B2A9BD28035DF50077D750;
+			remoteInfo = MATICTask;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0BEEFD10F84A02B82F5EE1CE /* Pods-MATICTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATICTask.release.xcconfig"; path = "Target Support Files/Pods-MATICTask/Pods-MATICTask.release.xcconfig"; sourceTree = "<group>"; };
@@ -32,7 +43,9 @@
 		E896C5C62804DD31000983C6 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		E896C5C72804DD31000983C6 /* RepositoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryTableViewCell.xib; sourceTree = "<group>"; };
 		E896C5CD2804DE98000983C6 /* RepositoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesTableViewController.swift; sourceTree = "<group>"; };
-		E896C5CF2804E375000983C6 /* RepositoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesService.swift; sourceTree = "<group>"; };
+		E896C5CF2804E375000983C6 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		E89B0C67280A023600F9CADA /* MATICTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MATICTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E89B0C72280A03CF00F9CADA /* APISeviceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISeviceTests.swift; sourceTree = "<group>"; };
 		E8B2A9BE28035DF50077D750 /* MATICTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MATICTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B2A9C128035DF50077D750 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8B2A9C328035DF50077D750 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +56,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E89B0C64280A023600F9CADA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E8B2A9BB28035DF50077D750 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -83,7 +103,6 @@
 		E89068352803796D00067110 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E896C5C42804DACE000983C6 /* Networking */,
 				E896C5C12804DA51000983C6 /* PONSOs */,
 			);
 			path = Models;
@@ -135,7 +154,7 @@
 		E896C5C42804DACE000983C6 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				E896C5CF2804E375000983C6 /* RepositoriesService.swift */,
+				E896C5CF2804E375000983C6 /* APIService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -157,10 +176,19 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		E89B0C68280A023600F9CADA /* MATICTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				E89B0C72280A03CF00F9CADA /* APISeviceTests.swift */,
+			);
+			path = MATICTaskTests;
+			sourceTree = "<group>";
+		};
 		E8B2A9B528035DF50077D750 = {
 			isa = PBXGroup;
 			children = (
 				E8B2A9C028035DF50077D750 /* MATICTask */,
+				E89B0C68280A023600F9CADA /* MATICTaskTests */,
 				E8B2A9BF28035DF50077D750 /* Products */,
 				6D47FACD3C80B1CA4EDAACE9 /* Pods */,
 				9FEA7D7B3E6855B0484C5048 /* Frameworks */,
@@ -171,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				E8B2A9BE28035DF50077D750 /* MATICTask.app */,
+				E89B0C67280A023600F9CADA /* MATICTaskTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,6 +210,7 @@
 				E896C5BC2804B83D000983C6 /* Extentions */,
 				E896C5BA2804B61D000983C6 /* Core */,
 				E896C5BB2804B638000983C6 /* Resources */,
+				E896C5C42804DACE000983C6 /* Networking */,
 				E896C5BF2804B9CC000983C6 /* Views */,
 				E8C04D4328063303005FD77E /* ViewModel */,
 				E89068352803796D00067110 /* Models */,
@@ -200,6 +230,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E89B0C66280A023600F9CADA /* MATICTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E89B0C6D280A023700F9CADA /* Build configuration list for PBXNativeTarget "MATICTaskTests" */;
+			buildPhases = (
+				E89B0C63280A023600F9CADA /* Sources */,
+				E89B0C64280A023600F9CADA /* Frameworks */,
+				E89B0C65280A023600F9CADA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E89B0C6C280A023600F9CADA /* PBXTargetDependency */,
+			);
+			name = MATICTaskTests;
+			productName = MATICTaskTests;
+			productReference = E89B0C67280A023600F9CADA /* MATICTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E8B2A9BD28035DF50077D750 /* MATICTask */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8B2A9D228035DF80077D750 /* Build configuration list for PBXNativeTarget "MATICTask" */;
@@ -228,6 +276,11 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					E89B0C66280A023600F9CADA = {
+						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
+						TestTargetID = E8B2A9BD28035DF50077D750;
+					};
 					E8B2A9BD28035DF50077D750 = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -247,11 +300,19 @@
 			projectRoot = "";
 			targets = (
 				E8B2A9BD28035DF50077D750 /* MATICTask */,
+				E89B0C66280A023600F9CADA /* MATICTaskTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E89B0C65280A023600F9CADA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E8B2A9BC28035DF50077D750 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,6 +352,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E89B0C63280A023600F9CADA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E89B0C73280A03CF00F9CADA /* APISeviceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E8B2A9BA28035DF50077D750 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,13 +369,21 @@
 				E8B2A9C228035DF50077D750 /* AppDelegate.swift in Sources */,
 				E896C5C82804DD31000983C6 /* RepositoryTableViewCell.swift in Sources */,
 				E896C5CE2804DE98000983C6 /* RepositoriesTableViewController.swift in Sources */,
-				E896C5D02804E375000983C6 /* RepositoriesService.swift in Sources */,
+				E896C5D02804E375000983C6 /* APIService.swift in Sources */,
 				E8B2A9C428035DF50077D750 /* SceneDelegate.swift in Sources */,
 				E896C5C32804DA77000983C6 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E89B0C6C280A023600F9CADA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8B2A9BD28035DF50077D750 /* MATICTask */;
+			targetProxy = E89B0C6B280A023600F9CADA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E8B2A9C728035DF50077D750 /* Main.storyboard */ = {
@@ -328,6 +405,53 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E89B0C6E280A023700F9CADA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MAGED.MATICTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MATICTask.app/MATICTask";
+			};
+			name = Debug;
+		};
+		E89B0C6F280A023700F9CADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MAGED.MATICTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MATICTask.app/MATICTask";
+			};
+			name = Release;
+		};
 		E8B2A9D028035DF80077D750 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -503,6 +627,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E89B0C6D280A023700F9CADA /* Build configuration list for PBXNativeTarget "MATICTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E89B0C6E280A023700F9CADA /* Debug */,
+				E89B0C6F280A023700F9CADA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E8B2A9B928035DF50077D750 /* Build configuration list for PBXProject "MATICTask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

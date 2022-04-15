@@ -9,7 +9,7 @@ import Foundation
 
 class RepositoryViewModel {
     
-    var repositoryService: RepositoryService
+    var repositoryService: APIService
     var currentPage: Int = 1
     var isFetchingRepositories = false
     var repositoryData: [Repository] = [] {
@@ -30,7 +30,7 @@ class RepositoryViewModel {
     var bindViewModelErrorToView: (()->()) = {}
     
     init() {
-        self.repositoryService = RepositoryService()
+        self.repositoryService = APIService()
         self.fetchRepositoriesFromAPI()
     }
     

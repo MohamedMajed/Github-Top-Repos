@@ -41,12 +41,14 @@ class RepositoryTableViewCell: UITableViewCell {
         usernameLabel.text = username
         numberOfStarsLabel.text = (String((numberOfStars)/1000.0) + "K ⭐")
         numberOfIssuesLabel.text = String(numberOfIssues) + " 🔴"
+        timeIntervalLabel.text = updatedDate
         let url = URL(string: avatarURL)
         ownerImageView.kf.setImage(with: url)
     }
     
     func updateImageContainer() {
-//        imageContainer.layer.backgroundColor = UIColor.white.cgColor
+        imageContainer.backgroundColor = UIColor.white.withAlphaComponent(0.50)
+        
 //        imageContainer.layer.shadowColor = UIColor.black.cgColor
 //        imageContainer.layer.shadowOpacity = 0.3
 //        imageContainer.layer.masksToBounds = false
@@ -65,7 +67,7 @@ class RepositoryTableViewCell: UITableViewCell {
     }
     
     func updateViewContainer() {
-        viewContainer.backgroundColor = UIColor.gray.withAlphaComponent(0.35)
+        viewContainer.backgroundColor = UIColor.white.withAlphaComponent(0.80)
         viewContainer.isOpaque = false
         viewContainer.layer.shadowColor = UIColor.gray.cgColor
         viewContainer.layer.shadowOpacity = 1.0

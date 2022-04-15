@@ -57,7 +57,7 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
         
         tableView.register(cellType: RepositoryTableViewCell.self)
         tableView.prefetchDataSource = self
-        tableView.backgroundView = UIImageView(image: UIImage(named: "Background3"))
+        tableView.backgroundView = UIImageView(image: UIImage(named: "Background1"))
         tableView.separatorStyle = .none
     }
 
@@ -84,44 +84,35 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
 
         let repository = repositoryViewModel.repositoryData[indexPath.row]
         
-        let exampleDate = Date().addingTimeInterval(-2000000)
-
-        // ask for the full relative date
+        let dateComponents = Calendar.current.dateComponents([.day, .weekOfMonth, .month], from: .now, to: repository.updatedAt)
+        
         let formatter = RelativeDateTimeFormatter()
-        formatter.unitsStyle = .full
+        
+        var timeInterval = formatter.localizedString(from: dateComponents)
 
-        // get exampleDate relative to the current date
-        let relativeDate = formatter.localizedString(for: exampleDate, relativeTo: Date())
-
-        // print it out
-        print("Relative date is: \(relativeDate)")
-
-        cell.configureCell(repositoryName: repository.name, repositoryDescription: repository.description ?? "", username: repository.owner?.login ?? "", avatarURL: repository.owner?.avatarUrl ?? "", numberOfStars: repository.stargazersCount, numberOfIssues: repository.openIssuesCount, updatedDate: "")
+        cell.configureCell(repositoryName: repository.name, repositoryDescription: repository.description ?? "", username: repository.owner?.login ?? "", avatarURL: repository.owner?.avatarUrl ?? "", numberOfStars: repository.stargazersCount, numberOfIssues: repository.openIssuesCount, updatedDate: timeInterval)
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 190
+        return 200
     }
     
-//    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        cell.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-//        UIView.animate(withDuration: 0.4) {
-//            cell.transform = CGAffineTransform.identity
-//        }
-//    }
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let lastSectionIndex = tableView.numberOfSections - 1
+        let lastRowIndex = tableView.numberOfRows(inSection: lastSectionIndex) - 1
+            if indexPath.section ==  lastSectionIndex && indexPath.row == lastRowIndex {
+                let spinner = UIActivityIndicatorView(style: .medium)
+                spinner.startAnimating()
+                spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
+
+                tableView.tableFooterView = spinner
+                tableView.tableFooterView?.isHidden = false
+    }
     
 //    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
 //        <#code#>
 //    }
-    
-//    let calendar = Calendar.current
-
-//    // Replace the hour (time) of both dates with 00:00
-//    let date1 = calendar.startOfDay(for: firstDate)
-//    let date2 = calendar.startOfDay(for: secondDate)
-//
-//    let components = calendar.dateComponents([.day], from: date1, to: date2)
-//    return components.day
+}
 }
