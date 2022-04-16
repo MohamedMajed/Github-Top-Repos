@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0069705BE7C445706353F580C66A07A4 /* Pods-MATICTask-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E3A59FA8D68AF19D5974F8A86EF8F4 /* Pods-MATICTask-dummy.m */; };
+		0069705BE7C445706353F580C66A07A4 /* Pods-MATICTask-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 827145CAA2EBD7A77D4E2A639FA8D3A1 /* Pods-MATICTask-dummy.m */; };
 		0513A205958C48AD0BDDBEECAB465E4F /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3E4DA72A1AAA0DCEDDF8EBBEB88497 /* MemoryStorage.swift */; };
 		0C44D7BE4E6113371C01FDD41842482F /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531C93A8F0FF1FC6C8577B1A9B8AF21B /* Kingfisher.swift */; };
 		0F2A08FB370BBC033E7FB5C878B6CB7B /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3800DEF3DCDF5B74056F47973E4F245 /* Indicator.swift */; };
@@ -28,6 +28,7 @@
 		2E8D2EBD4D0D81F4447E52EBE6D705C0 /* KingfisherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0012A60159F1AC5C7D124562DBC046 /* KingfisherError.swift */; };
 		367A7B5095309803D3F1745C84BF962A /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0458328A718BDC64FEBFD79BAD46BB /* Source.swift */; };
 		3B525673CDD2805ED9376B84F9A43E9C /* ImageFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AC437AD28D793D1FF354354E1D9DB /* ImageFormat.swift */; };
+		449E317017E6983109B198CE7867662B /* Pods-MATICTaskTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D9FFC72751613991DBCCE2AF50D188A7 /* Pods-MATICTaskTests-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		45F1D557897B5ABEA75E95C6FC4E0371 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AF25D5DA97F59D7DF1C05CD6F281A9 /* Placeholder.swift */; };
 		49AF5A1480717AA53EE454CF83F56DDC /* RetryStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CC35A595C50A66A72EDD98621582A7 /* RetryStrategy.swift */; };
 		56F8583572A71552269A400333225F4A /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0254AA6AB863B2EADC30DFBA15F626 /* Box.swift */; };
@@ -44,6 +45,7 @@
 		69D9466D3DB3CF9F84AF3125B3532F22 /* KFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AEF7AA985AB6EC7E4C565C8FDC7BD /* KFImage.swift */; };
 		6FDA2C4C907A270FD8FCCFDB5E755A84 /* KF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FD200F02E0E4789F444230A61C75EC /* KF.swift */; };
 		7472AEB017CA89B671FA48B79A29B805 /* AVAssetImageDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A461300076C628D918ED045F19AD0 /* AVAssetImageDataProvider.swift */; };
+		786932A64A0043F94D87E2641A13079E /* Pods-MATICTaskTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E59676AE4446F59187F7CABF493F27 /* Pods-MATICTaskTests-dummy.m */; };
 		7E9FA72668035FC80C945238BFF46B9E /* CallbackQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816A07F0E79A59E0A710C44F27B1442B /* CallbackQueue.swift */; };
 		8861C366DCB6E2F06F932FF1FAC800EB /* KFOptionsSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B3431A8E057A49FDDD8E7C200A9EF /* KFOptionsSetter.swift */; };
 		8BBAF7F32A7A1E73C760D9BE115186C1 /* ImageProgressive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77912FAEE3CB766012513E6A752DA753 /* ImageProgressive.swift */; };
@@ -68,7 +70,7 @@
 		E084647DCFEC510A30A7F982CF0BA302 /* Kingfisher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DBF10131A2A2B5338481D544FED910B4 /* Kingfisher-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E3C8607A92F519877840704B99857C9D /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0702D6EC84B2B865F958FC315ADDF713 /* String+MD5.swift */; };
 		EEEC8FC20C3BB7AA8160A548271B412C /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60680BF68EC197E1B9A15EF98CBA86A /* Filter.swift */; };
-		EF9E6F65EFDC9B5ADE4DF5E993757912 /* Pods-MATICTask-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 44F3E029A92FDDA7DE7FB4F67E4224B0 /* Pods-MATICTask-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EF9E6F65EFDC9B5ADE4DF5E993757912 /* Pods-MATICTask-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B7D53B9B221D13A028C6F2ACE6DD841 /* Pods-MATICTask-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EFEB66825259D4016C5A6A14F3A68872 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF784B19E9253A3A1B10EB4FA50F0E8 /* ImageTransition.swift */; };
 		F414B0BA81FE496166C3245DFEA33D81 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FB7ADDA263ECD539B579CB8808582 /* ImageDownloader.swift */; };
 		F9B3F3D5AA21A1B475E9E1F1138273B5 /* NSButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D559040503ADE981D9ED40AB4E21961B /* NSButton+Kingfisher.swift */; };
@@ -82,11 +84,17 @@
 			remoteGlobalIDString = E8022D22FAA6690B5E1C379C1BCE1491;
 			remoteInfo = Kingfisher;
 		};
+		C6046D1139E1536A53209B840348162E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8022D22FAA6690B5E1C379C1BCE1491;
+			remoteInfo = Kingfisher;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		01ABD1D210CB1BC86324FC7B19C0ECE6 /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/Networking/ImagePrefetcher.swift; sourceTree = "<group>"; };
-		04E3A59FA8D68AF19D5974F8A86EF8F4 /* Pods-MATICTask-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MATICTask-dummy.m"; sourceTree = "<group>"; };
 		0702D6EC84B2B865F958FC315ADDF713 /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/Utility/String+MD5.swift"; sourceTree = "<group>"; };
 		0CD449FA091D6FA3C4E2D8F423CBE1C8 /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormatIndicatedCacheSerializer.swift; path = Sources/Cache/FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
 		0D3E4DA72A1AAA0DCEDDF8EBBEB88497 /* MemoryStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MemoryStorage.swift; path = Sources/Cache/MemoryStorage.swift; sourceTree = "<group>"; };
@@ -97,7 +105,6 @@
 		1A0458328A718BDC64FEBFD79BAD46BB /* Source.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Source.swift; path = Sources/General/ImageSource/Source.swift; sourceTree = "<group>"; };
 		1A312D223D9151B87EFD08C35DB610EF /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Sources/General/ImageSource/Resource.swift; sourceTree = "<group>"; };
 		1A5BC4CAAEF5295E5409DBB257F055E7 /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Image/Image.swift; sourceTree = "<group>"; };
-		1C52DA253E33CABEFB9435B1FB82F60E /* Pods-MATICTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MATICTask.debug.xcconfig"; sourceTree = "<group>"; };
 		1D0012A60159F1AC5C7D124562DBC046 /* KingfisherError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherError.swift; path = Sources/General/KingfisherError.swift; sourceTree = "<group>"; };
 		1D070CA08F2CFEAD7228BDAE598255A1 /* Kingfisher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.debug.xcconfig; sourceTree = "<group>"; };
 		1DF81F1F45D27BA49DE12538FB4C6885 /* KFImageProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KFImageProtocol.swift; path = Sources/SwiftUI/KFImageProtocol.swift; sourceTree = "<group>"; };
@@ -113,59 +120,76 @@
 		3720F457914D85FE5B1DC5ABAA9150B6 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Sources/Networking/SessionDelegate.swift; sourceTree = "<group>"; };
 		3939592E0F7DC7B2ED73AAE7B996DA7A /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherOptionsInfo.swift; path = Sources/General/KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
 		41ADC826508B156B50FA022661CDD591 /* ImageBinder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageBinder.swift; path = Sources/SwiftUI/ImageBinder.swift; sourceTree = "<group>"; };
-		44F3E029A92FDDA7DE7FB4F67E4224B0 /* Pods-MATICTask-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MATICTask-umbrella.h"; sourceTree = "<group>"; };
 		47A711F4C0BFDE4EBE1E80B6693DC329 /* CacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheSerializer.swift; path = Sources/Cache/CacheSerializer.swift; sourceTree = "<group>"; };
+		51BB0B55D7D5BA302359B5125463921F /* Pods-MATICTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MATICTask.debug.xcconfig"; sourceTree = "<group>"; };
 		52757D256CEA8446AC3D2B3022F031F8 /* WKInterfaceImage+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WKInterfaceImage+Kingfisher.swift"; path = "Sources/Extensions/WKInterfaceImage+Kingfisher.swift"; sourceTree = "<group>"; };
 		531C93A8F0FF1FC6C8577B1A9B8AF21B /* Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kingfisher.swift; path = Sources/General/Kingfisher.swift; sourceTree = "<group>"; };
 		551C998BD19EAEACA4EBE33362D158A8 /* SizeExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SizeExtensions.swift; path = Sources/Utility/SizeExtensions.swift; sourceTree = "<group>"; };
 		57D88941E78FD521A0D94CC248D69DAE /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
+		584AC469B2BA9C1DB566834235B2EF63 /* Pods-MATICTask-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MATICTask-acknowledgements.markdown"; sourceTree = "<group>"; };
 		610A89B03E35AED1AD54A93C27F36104 /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Kingfisher.modulemap; sourceTree = "<group>"; };
 		625D034715ADDDF535FC9EE3CB81C5FA /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Sources/Utility/Result.swift; sourceTree = "<group>"; };
+		62D58FAD10F7280852EC9D9179D78FF3 /* Pods-MATICTask.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MATICTask.modulemap"; sourceTree = "<group>"; };
+		62E59676AE4446F59187F7CABF493F27 /* Pods-MATICTaskTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MATICTaskTests-dummy.m"; sourceTree = "<group>"; };
 		66A78742D3056612A13C883836579C01 /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/Image/ImageProcessor.swift; sourceTree = "<group>"; };
 		6B2F057EC092CD18F9941DC9E8DCCFD4 /* KFImageOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KFImageOptions.swift; path = Sources/SwiftUI/KFImageOptions.swift; sourceTree = "<group>"; };
 		6BAC96ACD7D3453D268459523E6FA175 /* ExtensionHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtensionHelpers.swift; path = Sources/Utility/ExtensionHelpers.swift; sourceTree = "<group>"; };
 		77912FAEE3CB766012513E6A752DA753 /* ImageProgressive.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProgressive.swift; path = Sources/Image/ImageProgressive.swift; sourceTree = "<group>"; };
 		7D82A497D7FB0B40C18FB1D96C84CAE8 /* ImageDownloaderDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloaderDelegate.swift; path = Sources/Networking/ImageDownloaderDelegate.swift; sourceTree = "<group>"; };
 		816A07F0E79A59E0A710C44F27B1442B /* CallbackQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CallbackQueue.swift; path = Sources/Utility/CallbackQueue.swift; sourceTree = "<group>"; };
+		827145CAA2EBD7A77D4E2A639FA8D3A1 /* Pods-MATICTask-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MATICTask-dummy.m"; sourceTree = "<group>"; };
 		89632D5F1723AD219A322590366E4333 /* RequestModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModifier.swift; path = Sources/Networking/RequestModifier.swift; sourceTree = "<group>"; };
 		8964247B4A23B06DA8782CE8EC5F282D /* CPListItem+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CPListItem+Kingfisher.swift"; path = "Sources/Extensions/CPListItem+Kingfisher.swift"; sourceTree = "<group>"; };
 		8DF27B9F44911E06158F6ED066A723AB /* KFAnimatedImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KFAnimatedImage.swift; path = Sources/SwiftUI/KFAnimatedImage.swift; sourceTree = "<group>"; };
+		8E5F1C6C7495080BD1FDC63491E6B234 /* Pods-MATICTaskTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MATICTaskTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8E712176A7E89B68B54C09CD8B8B28C9 /* ImageModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageModifier.swift; path = Sources/Networking/ImageModifier.swift; sourceTree = "<group>"; };
 		8FEFE9D4BE2907C9FB809769C688F541 /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Sources/Networking/RedirectHandler.swift; sourceTree = "<group>"; };
 		932AC437AD28D793D1FF354354E1D9DB /* ImageFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageFormat.swift; path = Sources/Image/ImageFormat.swift; sourceTree = "<group>"; };
 		9553417B2179E689D6C8D9384FF96848 /* ImageContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageContext.swift; path = Sources/SwiftUI/ImageContext.swift; sourceTree = "<group>"; };
-		982245CFB8A25BB3783BBF9711484CF6 /* Pods-MATICTask-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MATICTask-acknowledgements.plist"; sourceTree = "<group>"; };
+		95A9F383193A33EAD95B7E8440360B07 /* Pods-MATICTaskTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MATICTaskTests.modulemap"; sourceTree = "<group>"; };
 		98D027752B8E9A33A35EFB720D78CA83 /* SessionDataTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDataTask.swift; path = Sources/Networking/SessionDataTask.swift; sourceTree = "<group>"; };
+		9B7D53B9B221D13A028C6F2ACE6DD841 /* Pods-MATICTask-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MATICTask-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F869A4728C8A1BC18E4A082670219E5 /* Pods-MATICTask-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MATICTask-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A1BD521670FA1AD9EF0C8B59C4D300B4 /* DiskStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskStorage.swift; path = Sources/Cache/DiskStorage.swift; sourceTree = "<group>"; };
 		ABF784B19E9253A3A1B10EB4FA50F0E8 /* ImageTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageTransition.swift; path = Sources/Image/ImageTransition.swift; sourceTree = "<group>"; };
 		ACA5B4C37F2DFA1EAAD7860A52BBA86A /* Storage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Storage.swift; path = Sources/Cache/Storage.swift; sourceTree = "<group>"; };
+		AE58B9E15D1C3F05BF620B41524E7BAE /* Pods-MATICTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MATICTask.release.xcconfig"; sourceTree = "<group>"; };
 		B3800DEF3DCDF5B74056F47973E4F245 /* Indicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Indicator.swift; path = Sources/Views/Indicator.swift; sourceTree = "<group>"; };
 		B3FADD178EC4FBD429962AAB640EB02F /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImageView+Kingfisher.swift"; path = "Sources/Extensions/ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
 		B5CC35A595C50A66A72EDD98621582A7 /* RetryStrategy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryStrategy.swift; path = Sources/Networking/RetryStrategy.swift; sourceTree = "<group>"; };
 		BE3DADE88681E03D69310E0F0F313CB7 /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Sources/Cache/ImageCache.swift; sourceTree = "<group>"; };
 		BE6093D5EF2C3B58B93E56C6D7043C34 /* KFImageRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KFImageRenderer.swift; path = Sources/SwiftUI/KFImageRenderer.swift; sourceTree = "<group>"; };
-		C3750A9105399378F97BDAA7475DFE66 /* Pods-MATICTask.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MATICTask.modulemap"; sourceTree = "<group>"; };
 		C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = Kingfisher; path = libKingfisher.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4940909AAB47AA5AB45FE761C7BA4D4 /* GIFAnimatedImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFAnimatedImage.swift; path = Sources/Image/GIFAnimatedImage.swift; sourceTree = "<group>"; };
-		CE2A74D67D6DD05F9FB83527BD3FDE76 /* Pods-MATICTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MATICTask.release.xcconfig"; sourceTree = "<group>"; };
+		C642E19F775590B023362FE0AC7B61EC /* Pods-MATICTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MATICTaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		C8FBD6CA59E96F59996B8156BB407EAE /* Pods-MATICTask-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MATICTask-acknowledgements.plist"; sourceTree = "<group>"; };
 		CEBE5D174238F9281829A9747DCE0884 /* Pods-MATICTask */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-MATICTask"; path = "libPods-MATICTask.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38AEF7AA985AB6EC7E4C565C8FDC7BD /* KFImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KFImage.swift; path = Sources/SwiftUI/KFImage.swift; sourceTree = "<group>"; };
 		D559040503ADE981D9ED40AB4E21961B /* NSButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSButton+Kingfisher.swift"; path = "Sources/Extensions/NSButton+Kingfisher.swift"; sourceTree = "<group>"; };
 		D7D515FF359D2F0149A37B627E5DFC95 /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = Sources/Views/AnimatedImageView.swift; sourceTree = "<group>"; };
+		D9FFC72751613991DBCCE2AF50D188A7 /* Pods-MATICTaskTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MATICTaskTests-umbrella.h"; sourceTree = "<group>"; };
 		DBF10131A2A2B5338481D544FED910B4 /* Kingfisher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-umbrella.h"; sourceTree = "<group>"; };
 		DC0254AA6AB863B2EADC30DFBA15F626 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Utility/Box.swift; sourceTree = "<group>"; };
+		DC11DFC0F2F88954C42682E19F344983 /* Pods-MATICTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MATICTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF0157C68D390006ABE0A8BA88573532 /* AuthenticationChallengeResponsable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthenticationChallengeResponsable.swift; path = Sources/Networking/AuthenticationChallengeResponsable.swift; sourceTree = "<group>"; };
+		E01221FD3BB7ADFF0517F718D5A9C371 /* Pods-MATICTaskTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MATICTaskTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		E52808B01089F88940500EE4D70D4C9D /* ImageDrawing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDrawing.swift; path = Sources/Image/ImageDrawing.swift; sourceTree = "<group>"; };
 		E7AF25D5DA97F59D7DF1C05CD6F281A9 /* Placeholder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Placeholder.swift; path = Sources/Image/Placeholder.swift; sourceTree = "<group>"; };
 		EF1C8C493FC56D3ECE92ECBE758C29BE /* Kingfisher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kingfisher-dummy.m"; sourceTree = "<group>"; };
+		F175EE0FE7241D131F22CDFD1697ECF8 /* Pods-MATICTaskTests */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-MATICTaskTests"; path = "libPods-MATICTaskTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F6E91014B9476503150FC50978CA06 /* TVMonogramView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TVMonogramView+Kingfisher.swift"; path = "Sources/Extensions/TVMonogramView+Kingfisher.swift"; sourceTree = "<group>"; };
 		F60680BF68EC197E1B9A15EF98CBA86A /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Image/Filter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4EA3246FA5EBA22F910A8C0A197BEEA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD37C3E0FAC66949A6350A616DDB790D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -182,13 +206,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3E90D077A233ADDBDBDF10C654CE9B80 /* Products */ = {
+		0B6586285671B3AFA1ABC122B644D9E8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher */,
 				CEBE5D174238F9281829A9747DCE0884 /* Pods-MATICTask */,
+				F175EE0FE7241D131F22CDFD1697ECF8 /* Pods-MATICTaskTests */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		0EA9A65CA199DF5E5D47809F11ACD28B /* Pods-MATICTask */ = {
+			isa = PBXGroup;
+			children = (
+				62D58FAD10F7280852EC9D9179D78FF3 /* Pods-MATICTask.modulemap */,
+				584AC469B2BA9C1DB566834235B2EF63 /* Pods-MATICTask-acknowledgements.markdown */,
+				C8FBD6CA59E96F59996B8156BB407EAE /* Pods-MATICTask-acknowledgements.plist */,
+				827145CAA2EBD7A77D4E2A639FA8D3A1 /* Pods-MATICTask-dummy.m */,
+				9B7D53B9B221D13A028C6F2ACE6DD841 /* Pods-MATICTask-umbrella.h */,
+				51BB0B55D7D5BA302359B5125463921F /* Pods-MATICTask.debug.xcconfig */,
+				AE58B9E15D1C3F05BF620B41524E7BAE /* Pods-MATICTask.release.xcconfig */,
+			);
+			name = "Pods-MATICTask";
+			path = "Target Support Files/Pods-MATICTask";
+			sourceTree = "<group>";
+		};
+		3DBA3C054B96FBAF4EB8EDAB7D19EE54 /* Pods-MATICTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				95A9F383193A33EAD95B7E8440360B07 /* Pods-MATICTaskTests.modulemap */,
+				8E5F1C6C7495080BD1FDC63491E6B234 /* Pods-MATICTaskTests-acknowledgements.markdown */,
+				E01221FD3BB7ADFF0517F718D5A9C371 /* Pods-MATICTaskTests-acknowledgements.plist */,
+				62E59676AE4446F59187F7CABF493F27 /* Pods-MATICTaskTests-dummy.m */,
+				D9FFC72751613991DBCCE2AF50D188A7 /* Pods-MATICTaskTests-umbrella.h */,
+				DC11DFC0F2F88954C42682E19F344983 /* Pods-MATICTaskTests.debug.xcconfig */,
+				C642E19F775590B023362FE0AC7B61EC /* Pods-MATICTaskTests.release.xcconfig */,
+			);
+			name = "Pods-MATICTaskTests";
+			path = "Target Support Files/Pods-MATICTaskTests";
 			sourceTree = "<group>";
 		};
 		494FE7F8D4848F3393519FA2997ABEFE /* Support Files */ = {
@@ -203,21 +258,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Kingfisher";
-			sourceTree = "<group>";
-		};
-		7D56117A07B3E03998BF5433F33FE7D9 /* Pods-MATICTask */ = {
-			isa = PBXGroup;
-			children = (
-				C3750A9105399378F97BDAA7475DFE66 /* Pods-MATICTask.modulemap */,
-				9F869A4728C8A1BC18E4A082670219E5 /* Pods-MATICTask-acknowledgements.markdown */,
-				982245CFB8A25BB3783BBF9711484CF6 /* Pods-MATICTask-acknowledgements.plist */,
-				04E3A59FA8D68AF19D5974F8A86EF8F4 /* Pods-MATICTask-dummy.m */,
-				44F3E029A92FDDA7DE7FB4F67E4224B0 /* Pods-MATICTask-umbrella.h */,
-				1C52DA253E33CABEFB9435B1FB82F60E /* Pods-MATICTask.debug.xcconfig */,
-				CE2A74D67D6DD05F9FB83527BD3FDE76 /* Pods-MATICTask.release.xcconfig */,
-			);
-			name = "Pods-MATICTask";
-			path = "Target Support Files/Pods-MATICTask";
 			sourceTree = "<group>";
 		};
 		83025AB84560A3EF43346A5BACEBDBDA /* Kingfisher */ = {
@@ -290,14 +330,23 @@
 			path = Kingfisher;
 			sourceTree = "<group>";
 		};
+		B469EBFE82FE158F20E696DA1176B709 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0EA9A65CA199DF5E5D47809F11ACD28B /* Pods-MATICTask */,
+				3DBA3C054B96FBAF4EB8EDAB7D19EE54 /* Pods-MATICTaskTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
 				E1389CC10458FFF716AF4C00A167C48E /* Pods */,
-				3E90D077A233ADDBDBDF10C654CE9B80 /* Products */,
-				E09449E1CF2C32ECE284C56453B9154C /* Targets Support Files */,
+				0B6586285671B3AFA1ABC122B644D9E8 /* Products */,
+				B469EBFE82FE158F20E696DA1176B709 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -306,14 +355,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E09449E1CF2C32ECE284C56453B9154C /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7D56117A07B3E03998BF5433F33FE7D9 /* Pods-MATICTask */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		E1389CC10458FFF716AF4C00A167C48E /* Pods */ = {
@@ -332,6 +373,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E084647DCFEC510A30A7F982CF0BA302 /* Kingfisher-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F454B952FFE0B792A06B48CD4DC5213D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				449E317017E6983109B198CE7867662B /* Pods-MATICTaskTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +411,24 @@
 			name = "Pods-MATICTask";
 			productName = "Pods-MATICTask";
 			productReference = CEBE5D174238F9281829A9747DCE0884 /* Pods-MATICTask */;
+			productType = "com.apple.product-type.library.static";
+		};
+		72F86117EAB6B91D489414094FEA6AD7 /* Pods-MATICTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFB707AB10ED37675D189BDAF8282EA1 /* Build configuration list for PBXNativeTarget "Pods-MATICTaskTests" */;
+			buildPhases = (
+				F454B952FFE0B792A06B48CD4DC5213D /* Headers */,
+				A8DAA2AB66A2C9262A2742757D0C1E60 /* Sources */,
+				CD37C3E0FAC66949A6350A616DDB790D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0BC7C4CBBE01B271108CD076739E575 /* PBXTargetDependency */,
+			);
+			name = "Pods-MATICTaskTests";
+			productName = "Pods-MATICTaskTests";
+			productReference = F175EE0FE7241D131F22CDFD1697ECF8 /* Pods-MATICTaskTests */;
 			productType = "com.apple.product-type.library.static";
 		};
 		E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */ = {
@@ -400,12 +467,13 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 3E90D077A233ADDBDBDF10C654CE9B80 /* Products */;
+			productRefGroup = 0B6586285671B3AFA1ABC122B644D9E8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */,
 				296CEAEFD07243D4DED3B541F12646C6 /* Pods-MATICTask */,
+				72F86117EAB6B91D489414094FEA6AD7 /* Pods-MATICTaskTests */,
 			);
 		};
 /* End PBXProject section */
@@ -515,6 +583,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A8DAA2AB66A2C9262A2742757D0C1E60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				786932A64A0043F94D87E2641A13079E /* Pods-MATICTaskTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -523,6 +599,12 @@
 			name = Kingfisher;
 			target = E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */;
 			targetProxy = 850C129D2165C25EE0F44F7971DC5BA8 /* PBXContainerItemProxy */;
+		};
+		E0BC7C4CBBE01B271108CD076739E575 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kingfisher;
+			target = E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */;
+			targetProxy = C6046D1139E1536A53209B840348162E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -657,7 +739,7 @@
 		};
 		894D50C8A7B41A1993F2326C0B22B634 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE2A74D67D6DD05F9FB83527BD3FDE76 /* Pods-MATICTask.release.xcconfig */;
+			baseConfigurationReference = AE58B9E15D1C3F05BF620B41524E7BAE /* Pods-MATICTask.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -729,9 +811,54 @@
 			};
 			name = Release;
 		};
+		D161816AE5E815D80D2945E3EA305F33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC11DFC0F2F88954C42682E19F344983 /* Pods-MATICTaskTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MATICTaskTests/Pods-MATICTaskTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E4CD9597F7D0D4B91228E1059AED7685 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C642E19F775590B023362FE0AC7B61EC /* Pods-MATICTaskTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MATICTaskTests/Pods-MATICTaskTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		F03B5F05DA610FBA5CD95A26867ED57A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C52DA253E33CABEFB9435B1FB82F60E /* Pods-MATICTask.debug.xcconfig */;
+			baseConfigurationReference = 51BB0B55D7D5BA302359B5125463921F /* Pods-MATICTask.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -777,6 +904,15 @@
 			buildConfigurations = (
 				8FFB19608B05E0EA4E35BD211C6FBCC9 /* Debug */,
 				9B0DFDEC9EA43BEB7FCC30505AC17859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFB707AB10ED37675D189BDAF8282EA1 /* Build configuration list for PBXNativeTarget "Pods-MATICTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D161816AE5E815D80D2945E3EA305F33 /* Debug */,
+				E4CD9597F7D0D4B91228E1059AED7685 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

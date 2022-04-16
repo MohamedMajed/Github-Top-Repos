@@ -82,11 +82,11 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
 
         let repository = repositoryViewModel.repositoryData[indexPath.row]
         
-        let dateComponents = Calendar.current.dateComponents([.day, .weekOfMonth, .month], from: .now, to: repository.updatedAt)
+        let dateComponents = Calendar.current.dateComponents([.hour, .day, .weekOfMonth, .month], from: .now, to: repository.updatedAt)
         
         let formatter = RelativeDateTimeFormatter()
         
-        var timeInterval = formatter.localizedString(from: dateComponents)
+        let timeInterval = formatter.localizedString(from: dateComponents)
 
         cell.configureCell(repositoryName: repository.name ?? "", repositoryDescription: repository.description ?? "", username: repository.owner?.login ?? "", avatarURL: repository.owner?.avatarUrl ?? "", numberOfStars: repository.stargazersCount, numberOfIssues: repository.openIssuesCount, updatedDate: timeInterval)
         
@@ -100,7 +100,7 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let lastSectionIndex = tableView.numberOfSections - 1
         let lastRowIndex = tableView.numberOfRows(inSection: lastSectionIndex) - 1
-            if indexPath.section ==  lastSectionIndex && indexPath.row == lastRowIndex {
+        if indexPath.section ==  lastSectionIndex && indexPath.row == lastRowIndex {
                 let spinner = UIActivityIndicatorView(style: .medium)
                 spinner.startAnimating()
                 spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
