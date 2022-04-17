@@ -8,11 +8,13 @@
 import Foundation
 @testable import MATICTask
 
-class APIServiceMock {
+class APIServiceMock: APIServiceProtocol {
     
-    var fetchRepositoriesIsCalled = false
-    var fetchRepositoriesFromAPIIsCalled = false
+    var completeRepositories: [Repository] = [Repository]()
+    var isFetchRepositoriesCalled = false
     
-    
-    
+    func fetchRepositories(atPage: Int, completion: @escaping (Result<[Repository]?, Error>) -> Void) {
+     
+        isFetchRepositoriesCalled = true
+    }
 }

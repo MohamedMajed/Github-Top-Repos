@@ -10,6 +10,7 @@
 		16B97A8DC415D8EB26A58574 /* libPods-MATICTaskTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 419C7B1B3EDCD9AD2DB45DE8 /* libPods-MATICTaskTests.a */; };
 		6AC7FF4939E1CD8268C05027 /* libPods-MATICTask.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F664E0EFCB75866984CCDA /* libPods-MATICTask.a */; };
 		E830BC522807E9A5009BF47E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E830BC512807E9A5009BF47E /* Assets.xcassets */; };
+		E843C1FF280B8901000928FA /* RepositoryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E843C1FE280B8901000928FA /* RepositoryViewModelTests.swift */; };
 		E896C5BE2804B950000983C6 /* UITableView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896C5BD2804B950000983C6 /* UITableView+Extentions.swift */; };
 		E896C5C32804DA77000983C6 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896C5C22804DA77000983C6 /* Repository.swift */; };
 		E896C5C82804DD31000983C6 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896C5C62804DD31000983C6 /* RepositoryTableViewCell.swift */; };
@@ -45,6 +46,7 @@
 		82F664E0EFCB75866984CCDA /* libPods-MATICTask.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MATICTask.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DDC308BB5512DC5F8850B4F /* Pods-MATICTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATICTaskTests.release.xcconfig"; path = "Target Support Files/Pods-MATICTaskTests/Pods-MATICTaskTests.release.xcconfig"; sourceTree = "<group>"; };
 		E830BC512807E9A5009BF47E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E843C1FE280B8901000928FA /* RepositoryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewModelTests.swift; sourceTree = "<group>"; };
 		E896C5BD2804B950000983C6 /* UITableView+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extentions.swift"; sourceTree = "<group>"; };
 		E896C5C22804DA77000983C6 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		E896C5C62804DD31000983C6 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				E8C92C0B280A657A00B02FD5 /* stub.json */,
 				E8C92C0D280A662B00B02FD5 /* Bundle+unitTest.swift */,
 				E8E49581280B5F79004E874E /* APIServiceMock.swift */,
+				E843C1FE280B8901000928FA /* RepositoryViewModelTests.swift */,
 			);
 			path = MATICTaskTests;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E843C1FF280B8901000928FA /* RepositoryViewModelTests.swift in Sources */,
 				E89B0C73280A03CF00F9CADA /* APISeviceTests.swift in Sources */,
 				E8C92C0E280A662B00B02FD5 /* Bundle+unitTest.swift in Sources */,
 				E8E49582280B5F79004E874E /* APIServiceMock.swift in Sources */,

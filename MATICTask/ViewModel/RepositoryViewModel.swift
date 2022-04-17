@@ -9,10 +9,11 @@ import Foundation
 
 class RepositoryViewModel {
     
-    var repositoryService: APIService
+    var apiService: APIServiceProtocol!
+    var repositoryService: APIService!
     var currentPage: Int = 1
     var isFetchingRepositories = false
-    var repositoryData: [Repository] = [] {
+    var repositoriesData: [Repository] = [] {
         didSet {
             
             self.bindRepositoriesViewModelToView()
@@ -34,9 +35,13 @@ class RepositoryViewModel {
         self.fetchRepositoriesFromAPI()
     }
     
+    init(apiService: APIServiceProtocol = APIService()) {
+        self.apiService = apiService
+    }
+    
     func prefetchRows(at indexPaths: [IndexPath]) {
         for index in indexPaths {
-            if index.row >= repositoryData.count - 5 && !isFetchingRepositories && currentPage <= 10 {
+            if index.row >= repositoriesData.count - 5 && !isFetchingRepositories && currentPage <= 10 {
                 fetchRepositoriesFromAPI()
                 break
             }
@@ -46,12 +51,12 @@ class RepositoryViewModel {
     func fetchRepositoriesFromAPI() {
         
         isFetchingRepositories = true
-        repositoryService.fetchRepositories(atPage: currentPage) { result in
+        repositoryService?.fetchRepositories(atPage: currentPage) { result in
             switch result {
             case .success(let repositories):
                 print("Page Number : \(self.currentPage)")
                 if self.currentPage <= 10 {
-                    self.repositoryData.append(contentsOf: repositories ?? [])
+                    self.repositoriesData.append(contentsOf: repositories ?? [])
                     self.currentPage += 1
                 }
             case .failure(let error):

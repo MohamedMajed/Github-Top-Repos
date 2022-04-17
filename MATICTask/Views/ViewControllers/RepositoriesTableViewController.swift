@@ -69,8 +69,8 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        print("--------------\(repositoryViewModel.repositoryData.count)")
-        return repositoryViewModel.repositoryData.count
+        print("--------------\(repositoryViewModel.repositoriesData.count)")
+        return repositoryViewModel.repositoriesData.count
     }
     
     
@@ -80,7 +80,7 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
         cell.selectionStyle = .none
         cell.viewContainer.layer.cornerRadius = cell.viewContainer.frame.height / 15
         
-        let repository = repositoryViewModel.repositoryData[indexPath.row]
+        let repository = repositoryViewModel.repositoriesData[indexPath.row]
         
         let dateComponents = Calendar.current.dateComponents([.hour, .day, .weekOfMonth, .month], from: .now, to: repository.updatedAt)
         
