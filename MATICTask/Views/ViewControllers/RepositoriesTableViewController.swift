@@ -27,7 +27,7 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
         
         repositoryViewModel.bindViewModelErrorToView = {
             
-            self.onFailUpdateView()
+            self.showErrorAlert()
         }
     }
     
@@ -38,7 +38,7 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
         tableView.reloadData()
     }
     
-    private func onFailUpdateView() {
+    private func showErrorAlert() {
         let alert = UIAlertController(title: "Error 404", message: repositoryViewModel.errorMessage, preferredStyle: .alert)
         
         let action = UIAlertAction(title: "Ok", style: .default) {
