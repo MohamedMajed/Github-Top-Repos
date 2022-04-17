@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol APIServiceProtocol {
+protocol RepositoriesService {
     func fetchRepositories(atPage: Int, completion: @escaping (Result<[Repository]?, Error>) -> Void)
 }
 
-class APIService: APIServiceProtocol {
+class APIService: RepositoriesService {
     
     func fetchRepositories(atPage: Int, completion: @escaping (Result<[Repository]?, Error>) -> Void ) {
         let URLString = "https://api.github.com/search/repositories?per_page=100&q=created:>2017-10-22&sort=stars&order=desc&page=\(atPage)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!

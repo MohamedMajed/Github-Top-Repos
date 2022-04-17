@@ -15,7 +15,7 @@ struct RepositoryResponse: Codable {
 }
 
 // MARK: - Repository
-struct Repository: Codable {
+struct Repository: Codable, Equatable {
     let id: Int
     let name: String?
     let owner: Owner?
@@ -26,7 +26,7 @@ struct Repository: Codable {
 }
 
 // MARK: - Owner
-struct Owner: Codable {
+struct Owner: Codable, Equatable {
     let login: String?
     let id: Int?
     let avatarUrl: String?

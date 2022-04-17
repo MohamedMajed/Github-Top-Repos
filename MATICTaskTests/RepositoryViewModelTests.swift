@@ -10,33 +10,43 @@ import XCTest
 @testable import MATICTask
 
 class RepositoryViewModelTests: XCTestCase {
-    var sut: RepositoryViewModel!
-    var apiSeviceMock: APIServiceMock!
     
     
-    override func setUp() {
-        super.setUp()
-        apiSeviceMock = APIServiceMock()
-        sut = RepositoryViewModel(apiService: apiSeviceMock)
-    }
-    
-    override func tearDown() {
-        sut = nil
-        apiSeviceMock = nil
-        super.tearDown()
-    }
-    
-    func testFetchRepositoriesFromAPI() {
-        
-        // Given
-        apiSeviceMock.completeRepositories = [Repository]()
 
+    func testFetchRepositoriesFromAPI() {
+        let serviceMock = ServiceMock()
+        let sut = RepositoriesViewModel(repositoryService: serviceMock)
+       
         // When
         sut.fetchRepositoriesFromAPI()
-    
+
         // Assert
-        XCTAssert(apiSeviceMock!.isFetchRepositoriesCalled)
-        
+        XCTAssert(serviceMock.isFetchRepositoriesCalled)
     }
     
+    func testRepositoriesViewModelUpdatedSuccessfully() {
+        let repo = Repository(id: 1, name: "repoName", owner: nil, description: "", stargazersCount: 2.0, openIssuesCount: 1, createdAt: .now, updatedAt: .now)
+        let repositories: [Repository] = [repo, repo, repo]
+        let successResult: Result<[Repository]?, Error> = .success(repositories)
+        
+        let serviceMockWithResult = ServiceMockWithResult(result: successResult)
+        let sut = RepositoriesViewModel(repositoryService: serviceMockWithResult)
+        
+        sut.fetchRepositoriesFromAPI()
+        
+        XCTAssertEqual(repositories, sut.repositories)
+    }
+    
+    func testRepositoriesViewModelUpdatedFailed() {
+        
+        let error = NSError(domain: "", code: 1, userInfo: nil)
+        let FailedResult: Result<[Repository]?, Error> = .failure(error)
+        
+        let serviceMockWithResult = ServiceMockWithResult(result: FailedResult)
+        let sut = RepositoriesViewModel(repositoryService: serviceMockWithResult)
+        
+        sut.fetchRepositoriesFromAPI()
+        
+        XCTAssertEqual(error.localizedDescription, sut.errorMessage)
+    }
 }

@@ -67,9 +67,10 @@ class RepositoryTableViewCell: UITableViewCell {
     }
     
     func updateViewContainer() {
-        viewContainer.backgroundColor = UIColor.white.withAlphaComponent(0.80)
+        viewContainer.layer.cornerRadius = viewContainer.frame.height / 15
+        viewContainer.backgroundColor = UIColor.white.withAlphaComponent(0.9)
         viewContainer.isOpaque = false
-        viewContainer.layer.shadowColor = UIColor.gray.cgColor
-        viewContainer.layer.shadowOpacity = 1.0
+        viewContainer.layer.shadowColor = UIColor.darkGray.cgColor
+        viewContainer.layer.shadowOpacity = 0.8
     }
 }

@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 
 class RepositoriesTableViewController: UITableViewController, UITableViewDataSourcePrefetching {
-    private let repositoryViewModel = RepositoryViewModel()
+    private let repositoryViewModel = RepositoriesViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
     }
     
     private func onFailUpdateView() {
-        let alert = UIAlertController(title: "Error 404", message: repositoryViewModel.showError, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Error 404", message: repositoryViewModel.errorMessage, preferredStyle: .alert)
         
         let action = UIAlertAction(title: "Ok", style: .default) {
             (UIAlertAction) in
@@ -54,7 +54,8 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
     func configureTableView() {
         tableView.register(cellType: RepositoryTableViewCell.self)
         tableView.prefetchDataSource = self
-        tableView.backgroundView = UIImageView(image: UIImage(named: "Background1"))
+        tableView.backgroundView = UIImageView(image: UIImage(named: "Background6"))
+        tableView.backgroundView?.layer.opacity = 0.7
         tableView.separatorStyle = .none
     }
     
@@ -69,8 +70,8 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        print("--------------\(repositoryViewModel.repositoriesData.count)")
-        return repositoryViewModel.repositoriesData.count
+        print("--------------\(repositoryViewModel.repositories.count)")
+        return repositoryViewModel.repositories.count
     }
     
     
@@ -78,14 +79,10 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
         let cell = tableView.dequeueReusableCell(withType: RepositoryTableViewCell.self, for: indexPath)
         
         cell.selectionStyle = .none
-        cell.viewContainer.layer.cornerRadius = cell.viewContainer.frame.height / 15
         
-        let repository = repositoryViewModel.repositoriesData[indexPath.row]
-        
+        let repository = repositoryViewModel.repositories[indexPath.row]
         let dateComponents = Calendar.current.dateComponents([.hour, .day, .weekOfMonth, .month], from: .now, to: repository.updatedAt)
-        
         let formatter = RelativeDateTimeFormatter()
-        
         let timeInterval = formatter.localizedString(from: dateComponents)
         
         cell.configureCell(repositoryName: repository.name ?? "", repositoryDescription: repository.description ?? "", username: repository.owner?.login ?? "", avatarURL: repository.owner?.avatarUrl ?? "", numberOfStars: repository.stargazersCount, numberOfIssues: repository.openIssuesCount, updatedDate: timeInterval)
@@ -101,9 +98,9 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
         let lastSectionIndex = tableView.numberOfSections - 1
         let lastRowIndex = tableView.numberOfRows(inSection: lastSectionIndex) - 1
         if indexPath.section ==  lastSectionIndex && indexPath.row == lastRowIndex {
-            let spinner = UIActivityIndicatorView(style: .medium)
+            let spinner = UIActivityIndicatorView(style: .large)
             spinner.startAnimating()
-            spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
+            spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(60))
             
             tableView.tableFooterView = spinner
             tableView.tableFooterView?.isHidden = false

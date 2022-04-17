@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,17 +16,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen5" translatesAutoresizingMaskIntoConstraints="NO" id="NHp-ex-boN">
-                                <rect key="frame" x="0.0" y="44" width="414" height="808"/>
+                                <rect key="frame" x="65" y="162" width="284" height="572"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.95794354063091858" green="0.95794354063091858" blue="0.95794354063091858" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NHp-ex-boN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1BH-0w-V7O"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NHp-ex-boN" secondAttribute="trailing" id="3iO-lg-ovx"/>
+                            <constraint firstItem="NHp-ex-boN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="1BH-0w-V7O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NHp-ex-boN" secondAttribute="trailing" constant="65" id="3iO-lg-ovx"/>
                             <constraint firstItem="NHp-ex-boN" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="3zh-Pw-TEF"/>
                             <constraint firstItem="NHp-ex-boN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="TUj-uY-cS3"/>
-                            <constraint firstItem="NHp-ex-boN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rpV-5r-2Dw"/>
+                            <constraint firstItem="NHp-ex-boN" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="162" id="rpV-5r-2Dw"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,8 +38,5 @@
     </scenes>
     <resources>
         <image name="LaunchScreen5" width="295" height="320"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

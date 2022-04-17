@@ -44,7 +44,7 @@ class APISeviceTests: XCTestCase {
             }
             promise.fulfill()
         })
-        wait(for: [promise], timeout: 10)
+        wait(for: [promise], timeout: 4)
         
         XCTAssertNil(responseError)
         XCTAssertNotNil(responseRepositories)

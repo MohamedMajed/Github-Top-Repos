@@ -7,20 +7,19 @@
 
 import Foundation
 
-class RepositoryViewModel {
+class RepositoriesViewModel {
     
-    var apiService: APIServiceProtocol!
-    var repositoryService: APIService!
+    var repositoryService: RepositoriesService!
     var currentPage: Int = 1
     var isFetchingRepositories = false
-    var repositoriesData: [Repository] = [] {
+    var repositories: [Repository] = [] {
         didSet {
             
             self.bindRepositoriesViewModelToView()
         }
     }
     
-    var showError: String! {
+    var errorMessage: String = "" {
         didSet {
             
             self.bindViewModelErrorToView()
@@ -35,13 +34,13 @@ class RepositoryViewModel {
         self.fetchRepositoriesFromAPI()
     }
     
-    init(apiService: APIServiceProtocol = APIService()) {
-        self.apiService = apiService
+    init(repositoryService: RepositoriesService = APIService()) {
+        self.repositoryService = repositoryService
     }
     
     func prefetchRows(at indexPaths: [IndexPath]) {
         for index in indexPaths {
-            if index.row >= repositoriesData.count - 5 && !isFetchingRepositories && currentPage <= 10 {
+            if index.row >= repositories.count - 5 && !isFetchingRepositories && currentPage <= 10 {
                 fetchRepositoriesFromAPI()
                 break
             }
@@ -56,12 +55,12 @@ class RepositoryViewModel {
             case .success(let repositories):
                 print("Page Number : \(self.currentPage)")
                 if self.currentPage <= 10 {
-                    self.repositoriesData.append(contentsOf: repositories ?? [])
+                    self.repositories.append(contentsOf: repositories ?? [])
                     self.currentPage += 1
                 }
             case .failure(let error):
                 let message = error.localizedDescription
-                self.showError = message
+                self.errorMessage = message
                 print(error.localizedDescription)
             }
             self.isFetchingRepositories = false

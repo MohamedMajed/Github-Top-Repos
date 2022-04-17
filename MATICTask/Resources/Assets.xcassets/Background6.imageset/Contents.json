@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "see-all-open-source-repositories-github-logo-11563031735gubsot66ry.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,6 +9,7 @@
       "scale" : "2x"
     },
     {
+      "filename" : "Background 1@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -11,6 +11,7 @@
 		6AC7FF4939E1CD8268C05027 /* libPods-MATICTask.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F664E0EFCB75866984CCDA /* libPods-MATICTask.a */; };
 		E830BC522807E9A5009BF47E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E830BC512807E9A5009BF47E /* Assets.xcassets */; };
 		E843C1FF280B8901000928FA /* RepositoryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E843C1FE280B8901000928FA /* RepositoryViewModelTests.swift */; };
+		E88FF0C0280CC6480051D559 /* ServiceMockWithResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88FF0BF280CC6480051D559 /* ServiceMockWithResult.swift */; };
 		E896C5BE2804B950000983C6 /* UITableView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896C5BD2804B950000983C6 /* UITableView+Extentions.swift */; };
 		E896C5C32804DA77000983C6 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896C5C22804DA77000983C6 /* Repository.swift */; };
 		E896C5C82804DD31000983C6 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896C5C62804DD31000983C6 /* RepositoryTableViewCell.swift */; };
@@ -22,10 +23,10 @@
 		E8B2A9C428035DF50077D750 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B2A9C328035DF50077D750 /* SceneDelegate.swift */; };
 		E8B2A9C928035DF50077D750 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B2A9C728035DF50077D750 /* Main.storyboard */; };
 		E8B2A9CE28035DF80077D750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B2A9CC28035DF80077D750 /* LaunchScreen.storyboard */; };
-		E8C04D4528063333005FD77E /* RepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C04D4428063333005FD77E /* RepositoryViewModel.swift */; };
+		E8C04D4528063333005FD77E /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C04D4428063333005FD77E /* RepositoriesViewModel.swift */; };
 		E8C92C0C280A657A00B02FD5 /* stub.json in Resources */ = {isa = PBXBuildFile; fileRef = E8C92C0B280A657A00B02FD5 /* stub.json */; };
 		E8C92C0E280A662B00B02FD5 /* Bundle+unitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C92C0D280A662B00B02FD5 /* Bundle+unitTest.swift */; };
-		E8E49582280B5F79004E874E /* APIServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E49581280B5F79004E874E /* APIServiceMock.swift */; };
+		E8E49582280B5F79004E874E /* ServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E49581280B5F79004E874E /* ServiceMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		9DDC308BB5512DC5F8850B4F /* Pods-MATICTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATICTaskTests.release.xcconfig"; path = "Target Support Files/Pods-MATICTaskTests/Pods-MATICTaskTests.release.xcconfig"; sourceTree = "<group>"; };
 		E830BC512807E9A5009BF47E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E843C1FE280B8901000928FA /* RepositoryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewModelTests.swift; sourceTree = "<group>"; };
+		E88FF0BF280CC6480051D559 /* ServiceMockWithResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMockWithResult.swift; sourceTree = "<group>"; };
 		E896C5BD2804B950000983C6 /* UITableView+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extentions.swift"; sourceTree = "<group>"; };
 		E896C5C22804DA77000983C6 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		E896C5C62804DD31000983C6 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -61,10 +63,10 @@
 		E8B2A9C828035DF50077D750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8B2A9CD28035DF80077D750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8B2A9CF28035DF80077D750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8C04D4428063333005FD77E /* RepositoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewModel.swift; sourceTree = "<group>"; };
+		E8C04D4428063333005FD77E /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
 		E8C92C0B280A657A00B02FD5 /* stub.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = stub.json; sourceTree = "<group>"; };
 		E8C92C0D280A662B00B02FD5 /* Bundle+unitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+unitTest.swift"; sourceTree = "<group>"; };
-		E8E49581280B5F79004E874E /* APIServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceMock.swift; sourceTree = "<group>"; };
+		E8E49581280B5F79004E874E /* ServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,8 +200,9 @@
 				E89B0C72280A03CF00F9CADA /* APISeviceTests.swift */,
 				E8C92C0B280A657A00B02FD5 /* stub.json */,
 				E8C92C0D280A662B00B02FD5 /* Bundle+unitTest.swift */,
-				E8E49581280B5F79004E874E /* APIServiceMock.swift */,
+				E8E49581280B5F79004E874E /* ServiceMock.swift */,
 				E843C1FE280B8901000928FA /* RepositoryViewModelTests.swift */,
+				E88FF0BF280CC6480051D559 /* ServiceMockWithResult.swift */,
 			);
 			path = MATICTaskTests;
 			sourceTree = "<group>";
@@ -242,7 +245,7 @@
 		E8C04D4328063303005FD77E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				E8C04D4428063333005FD77E /* RepositoryViewModel.swift */,
+				E8C04D4428063333005FD77E /* RepositoriesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -403,7 +406,8 @@
 				E843C1FF280B8901000928FA /* RepositoryViewModelTests.swift in Sources */,
 				E89B0C73280A03CF00F9CADA /* APISeviceTests.swift in Sources */,
 				E8C92C0E280A662B00B02FD5 /* Bundle+unitTest.swift in Sources */,
-				E8E49582280B5F79004E874E /* APIServiceMock.swift in Sources */,
+				E88FF0C0280CC6480051D559 /* ServiceMockWithResult.swift in Sources */,
+				E8E49582280B5F79004E874E /* ServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,7 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8C04D4528063333005FD77E /* RepositoryViewModel.swift in Sources */,
+				E8C04D4528063333005FD77E /* RepositoriesViewModel.swift in Sources */,
 				E896C5BE2804B950000983C6 /* UITableView+Extentions.swift in Sources */,
 				E8B2A9C228035DF50077D750 /* AppDelegate.swift in Sources */,
 				E896C5C82804DD31000983C6 /* RepositoryTableViewCell.swift in Sources */,
