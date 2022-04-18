@@ -22,7 +22,7 @@ struct Repository: Codable, Equatable {
     let description: String?
     let stargazersCount: Double
     let openIssuesCount: Int
-    let createdAt, updatedAt: Date
+    let updatedAt: Date
 }
 
 // MARK: - Owner

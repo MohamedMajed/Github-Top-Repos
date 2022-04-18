@@ -54,7 +54,7 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
     func configureTableView() {
         tableView.register(cellType: RepositoryTableViewCell.self)
         tableView.prefetchDataSource = self
-        tableView.backgroundView = UIImageView(image: UIImage(named: "Background6"))
+        tableView.backgroundView = UIImageView(image: UIImage(named: "Background7"))
         tableView.backgroundView?.layer.opacity = 0.7
         tableView.separatorStyle = .none
     }
@@ -79,13 +79,9 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
         let cell = tableView.dequeueReusableCell(withType: RepositoryTableViewCell.self, for: indexPath)
         
         cell.selectionStyle = .none
-        
         let repository = repositoryViewModel.repositories[indexPath.row]
-        let dateComponents = Calendar.current.dateComponents([.hour, .day, .weekOfMonth, .month], from: .now, to: repository.updatedAt)
-        let formatter = RelativeDateTimeFormatter()
-        let timeInterval = formatter.localizedString(from: dateComponents)
         
-        cell.configureCell(repositoryName: repository.name ?? "", repositoryDescription: repository.description ?? "", username: repository.owner?.login ?? "", avatarURL: repository.owner?.avatarUrl ?? "", numberOfStars: repository.stargazersCount, numberOfIssues: repository.openIssuesCount, updatedDate: timeInterval)
+        cell.configureCell(repositoryName: repository.name ?? "", repositoryDescription: repository.description ?? "", username: repository.owner?.login ?? "", avatarURL: repository.owner?.avatarUrl ?? "", numberOfStars: repository.stargazersCount, numberOfIssues: repository.openIssuesCount, updatedDate: repository.updatedAt)
         
         return cell
     }
@@ -95,6 +91,7 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+   
         let lastSectionIndex = tableView.numberOfSections - 1
         let lastRowIndex = tableView.numberOfRows(inSection: lastSectionIndex) - 1
         if indexPath.section ==  lastSectionIndex && indexPath.row == lastRowIndex {

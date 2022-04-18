@@ -9,7 +9,7 @@ import Foundation
 
 class RepositoriesViewModel {
     
-    var repositoryService: RepositoriesService!
+    var repositoryService: RepositoriesService
     var currentPage: Int = 1
     var isFetchingRepositories = false
     var repositories: [Repository] = [] {
@@ -50,7 +50,7 @@ class RepositoriesViewModel {
     func fetchRepositoriesFromAPI() {
         
         isFetchingRepositories = true
-        repositoryService?.fetchRepositories(atPage: currentPage) { result in
+        repositoryService.fetchRepositories(atPage: currentPage) { result in
             switch result {
             case .success(let repositories):
                 print("Page Number : \(self.currentPage)")

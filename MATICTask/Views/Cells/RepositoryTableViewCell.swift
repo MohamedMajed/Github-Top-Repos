@@ -34,39 +34,38 @@ class RepositoryTableViewCell: UITableViewCell {
     
     // MARK: - Configure Table view cell
     
-    func configureCell(repositoryName: String, repositoryDescription: String, username: String, avatarURL: String, numberOfStars: Double, numberOfIssues: Int, updatedDate: String) {
+    func configureCell(repositoryName: String, repositoryDescription: String, username: String, avatarURL: String, numberOfStars: Double, numberOfIssues: Int, updatedDate: Date) {
         
         repositoryNameLabel.text = repositoryName
         repositoryDescriptionLabel.text = repositoryDescription
         usernameLabel.text = username
-        numberOfStarsLabel.text = (String((numberOfStars)/1000.0) + "K ⭐")
+        numberOfStarsLabel.text = (String(format: "%.1f", (numberOfStars)/1000.0) + "K ⭐")
         numberOfIssuesLabel.text = String(numberOfIssues) + " 🔴"
-        timeIntervalLabel.text = updatedDate
+        
         let url = URL(string: avatarURL)
         ownerImageView.kf.setImage(with: url)
+        
+        let dateComponents = Calendar.current.dateComponents([.hour, .day, .weekOfMonth, .month], from: .now, to: updatedDate)
+        let formatter = RelativeDateTimeFormatter()
+        let timeInterval = formatter.localizedString(from: dateComponents)
+        timeIntervalLabel.text = timeInterval
+        
     }
     
     func updateImageContainer() {
-        imageContainer.backgroundColor = UIColor.white.withAlphaComponent(0.50)
         
-//        imageContainer.layer.shadowColor = UIColor.black.cgColor
-//        imageContainer.layer.shadowOpacity = 0.3
-//        imageContainer.layer.masksToBounds = false
-//        imageContainer.layer.shadowOffset = .zero
-//        imageContainer.layer.shadowRadius = 3
+        imageContainer.backgroundColor = UIColor.white.withAlphaComponent(0.50)
         imageContainer.layer.cornerRadius = 55
-//        imageContainer.layer.backgroundColor = UIColor.gray.cgColor
+
     }
    
     func updateOwnerImage() {
-//        ownerImageView.layer.shadowOpacity = 1
-//        ownerImageView.layer.shadowRadius = 7
+        
         ownerImageView.layer.cornerRadius = 52.5
-//        ownerImageView.layer.borderWidth = 2
-//        ownerImageView.layer.borderColor = UIColor.gray.cgColor
     }
     
     func updateViewContainer() {
+        
         viewContainer.layer.cornerRadius = viewContainer.frame.height / 15
         viewContainer.backgroundColor = UIColor.white.withAlphaComponent(0.9)
         viewContainer.isOpaque = false
