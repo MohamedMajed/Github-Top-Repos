@@ -19,6 +19,7 @@
 		E896C5CE2804DE98000983C6 /* RepositoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896C5CD2804DE98000983C6 /* RepositoriesTableViewController.swift */; };
 		E896C5D02804E375000983C6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896C5CF2804E375000983C6 /* APIService.swift */; };
 		E89B0C73280A03CF00F9CADA /* APISeviceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B0C72280A03CF00F9CADA /* APISeviceTests.swift */; };
+		E8ADEA3E280E09B1008AEC11 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ADEA3D280E09B1008AEC11 /* APIError.swift */; };
 		E8B2A9C228035DF50077D750 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B2A9C128035DF50077D750 /* AppDelegate.swift */; };
 		E8B2A9C428035DF50077D750 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B2A9C328035DF50077D750 /* SceneDelegate.swift */; };
 		E8B2A9C928035DF50077D750 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B2A9C728035DF50077D750 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		E896C5CF2804E375000983C6 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		E89B0C67280A023600F9CADA /* MATICTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MATICTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E89B0C72280A03CF00F9CADA /* APISeviceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISeviceTests.swift; sourceTree = "<group>"; };
+		E8ADEA3D280E09B1008AEC11 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		E8B2A9BE28035DF50077D750 /* MATICTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MATICTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B2A9C128035DF50077D750 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8B2A9C328035DF50077D750 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				E896C5CF2804E375000983C6 /* APIService.swift */,
+				E8ADEA3D280E09B1008AEC11 /* APIError.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				E896C5D02804E375000983C6 /* APIService.swift in Sources */,
 				E8B2A9C428035DF50077D750 /* SceneDelegate.swift in Sources */,
 				E896C5C32804DA77000983C6 /* Repository.swift in Sources */,
+				E8ADEA3E280E09B1008AEC11 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

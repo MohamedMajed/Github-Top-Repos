@@ -52,10 +52,10 @@ class RepositoriesViewModel {
         isFetchingRepositories = true
         repositoryService.fetchRepositories(atPage: currentPage) { result in
             switch result {
-            case .success(let repositories):
+            case .success(let repositoriesResponse):
                 print("Page Number : \(self.currentPage)")
                 if self.currentPage <= 10 {
-                    self.repositories.append(contentsOf: repositories ?? [])
+                    self.repositories.append(contentsOf: repositoriesResponse.items ?? [])
                     self.currentPage += 1
                 }
             case .failure(let error):
