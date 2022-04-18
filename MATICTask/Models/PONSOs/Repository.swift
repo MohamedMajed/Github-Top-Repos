@@ -23,6 +23,7 @@ struct Repository: Codable, Equatable {
     let stargazersCount: Double
     let openIssuesCount: Int
     let updatedAt: Date
+    let htmlUrl: URL?
 }
 
 // MARK: - Owner

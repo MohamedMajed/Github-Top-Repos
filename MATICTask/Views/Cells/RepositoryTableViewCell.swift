@@ -61,7 +61,7 @@ class RepositoryTableViewCell: UITableViewCell {
    
     func updateOwnerImage() {
         
-        ownerImageView.layer.cornerRadius = 52.5
+        ownerImageView.layer.cornerRadius = 30.0
     }
     
     func updateViewContainer() {

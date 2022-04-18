@@ -54,7 +54,7 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
     func configureTableView() {
         tableView.register(cellType: RepositoryTableViewCell.self)
         tableView.prefetchDataSource = self
-        tableView.backgroundView = UIImageView(image: UIImage(named: "Background7"))
+        tableView.backgroundView = UIImageView(image: UIImage(named: "Background9"))
         tableView.backgroundView?.layer.opacity = 0.7
         tableView.separatorStyle = .none
     }
@@ -84,6 +84,14 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
         cell.configureCell(repositoryName: repository.name ?? "", repositoryDescription: repository.description ?? "", username: repository.owner?.login ?? "", avatarURL: repository.owner?.avatarUrl ?? "", numberOfStars: repository.stargazersCount, numberOfIssues: repository.openIssuesCount, updatedDate: repository.updatedAt)
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let repository = repositoryViewModel.repositories[indexPath.row]
+        let url = repository.htmlUrl
+        if let url = url {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
