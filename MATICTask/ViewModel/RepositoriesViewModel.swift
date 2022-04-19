@@ -40,7 +40,7 @@ class RepositoriesViewModel {
     
     func prefetchRows(at indexPaths: [IndexPath]) {
         for index in indexPaths {
-            if index.row >= repositories.count - 10 && !isFetchingRepositories && currentPage <= 10 {
+            if index.row >= repositories.count - 20 && !isFetchingRepositories && currentPage <= 10 {
                 fetchRepositoriesFromAPI()
                 break
             }

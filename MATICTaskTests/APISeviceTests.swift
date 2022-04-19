@@ -37,8 +37,8 @@ class APISeviceTests: XCTestCase {
         
         sut.fetchRepositories(atPage: 0, completion: { result in
             switch result {
-            case .success(let repositories):
-                responseRepositories = repositories
+            case .success(let repositoriesResponse):
+                responseRepositories = repositoriesResponse.items
             case .failure(let error):
                 responseError = error
             }

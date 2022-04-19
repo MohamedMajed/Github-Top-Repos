@@ -9,16 +9,14 @@ import Foundation
 @testable import MATICTask
 
 class ServiceMockWithResult: RepositoriesService {
-    let result: Result<[Repository]?, Error>
+    func fetchRepositories(atPage: Int, completion: @escaping (Result<RepositoryResponse, Error>) -> Void) {
+        completion(result)
+    }
     
-    init(result: Result<[Repository]?, Error>) {
+    let result: Result<RepositoryResponse, Error>
+    
+    init(result: Result<RepositoryResponse, Error>) {
         
         self.result = result
     }
-    
-    func fetchRepositories(atPage: Int, completion: @escaping (Result<[Repository]?, Error>) -> Void) {
-     
-        completion(result)
-    }
-
 }

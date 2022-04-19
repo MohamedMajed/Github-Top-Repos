@@ -25,9 +25,10 @@ class RepositoryViewModelTests: XCTestCase {
     }
     
     func testRepositoriesViewModelUpdatedSuccessfully() {
-        let repo = Repository(id: 1, name: "repoName", owner: nil, description: "", stargazersCount: 2.0, openIssuesCount: 1, createdAt: .now, updatedAt: .now)
+        let repo = Repository(id: 1, name: "repoName", owner: nil, description: "", stargazersCount: 2.0, openIssuesCount: 1, updatedAt: .now, htmlUrl: URL(string: ""))
         let repositories: [Repository] = [repo, repo, repo]
-        let successResult: Result<[Repository]?, Error> = .success(repositories)
+        let repos: RepositoryResponse = RepositoryResponse.init(totalCount: 1, incompleteResults: true, items: repositories)
+        let successResult: Result<RepositoryResponse, Error> = .success(repos)
         
         let serviceMockWithResult = ServiceMockWithResult(result: successResult)
         let sut = RepositoriesViewModel(repositoryService: serviceMockWithResult)
@@ -40,7 +41,7 @@ class RepositoryViewModelTests: XCTestCase {
     func testRepositoriesViewModelUpdatedFailed() {
         
         let error = NSError(domain: "", code: 1, userInfo: nil)
-        let FailedResult: Result<[Repository]?, Error> = .failure(error)
+        let FailedResult: Result<RepositoryResponse, Error> = .failure(error)
         
         let serviceMockWithResult = ServiceMockWithResult(result: FailedResult)
         let sut = RepositoriesViewModel(repositoryService: serviceMockWithResult)

@@ -12,9 +12,8 @@ class ServiceMock: RepositoriesService {
     
     var isFetchRepositoriesCalled = false
     
-    func fetchRepositories(atPage: Int, completion: @escaping (Result<[Repository]?, Error>) -> Void) {
-     
+    func fetchRepositories(atPage: Int, completion: @escaping (Result<RepositoryResponse, Error>) -> Void) {
+        
         isFetchRepositoriesCalled = true
     }
-
 }

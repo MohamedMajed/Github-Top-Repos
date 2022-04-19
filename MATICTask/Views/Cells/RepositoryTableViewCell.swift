@@ -29,7 +29,15 @@ class RepositoryTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
+        if selected{
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.transform = CGAffineTransform(scaleX: 0.85, y: 0.85)
+                }, completion: { finished in
+                    UIView.animate(withDuration: 0.2) {
+                        self.transform = .identity
+                    }
+                })
+            }
     }
     
     // MARK: - Configure Table view cell
@@ -55,13 +63,15 @@ class RepositoryTableViewCell: UITableViewCell {
     func updateImageContainer() {
         
         imageContainer.backgroundColor = UIColor.white.withAlphaComponent(0.50)
-        imageContainer.layer.cornerRadius = 55
+        imageContainer.layer.cornerRadius = 32.0
 
     }
    
     func updateOwnerImage() {
         
         ownerImageView.layer.cornerRadius = 30.0
+        ownerImageView.layer.borderWidth = 1
+        ownerImageView.layer.borderColor = UIColor.blue.withAlphaComponent(0.5).cgColor
     }
     
     func updateViewContainer() {
