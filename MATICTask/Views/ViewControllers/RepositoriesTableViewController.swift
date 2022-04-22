@@ -10,24 +10,24 @@ import Kingfisher
 
 class RepositoriesTableViewController: UITableViewController, UITableViewDataSourcePrefetching {
     private let repositoryViewModel = RepositoriesViewModel()
+    let activityIndicator = UIActivityIndicatorView(style: .large)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        startActivityIndicator()
         configureTableView()
         subscribeToViewModelEvents()
     }
     
     private func subscribeToViewModelEvents() {
         
-        repositoryViewModel.bindRepositoriesViewModelToView = {
-            
-            self.onSuccessUpdateView()
+        repositoryViewModel.bindRepositoriesViewModelToView = { [weak self] in
+            self?.onSuccessUpdateView()
         }
         
-        repositoryViewModel.bindViewModelErrorToView = {
-            
-            self.showErrorAlert()
+        repositoryViewModel.bindViewModelErrorToView = { [weak self] in
+            self?.showErrorAlert()
         }
     }
     
@@ -36,6 +36,7 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
     private func onSuccessUpdateView() {
         
         tableView.reloadData()
+        stopActivityIndicator()
     }
     
     private func showErrorAlert() {
@@ -47,6 +48,17 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
         
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func startActivityIndicator() {
+        activityIndicator.center = self.view.center
+        activityIndicator.color = UIColor.darkGray
+        self.view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+    }
+    
+    func stopActivityIndicator() {
+        activityIndicator.stopAnimating()
     }
     
     // MARK: - Configure Table view
@@ -70,7 +82,6 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        print("--------------\(repositoryViewModel.repositories.count)")
         return repositoryViewModel.repositories.count
     }
     
@@ -89,6 +100,10 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let repository = repositoryViewModel.repositories[indexPath.row]
         let url = repository.htmlUrl
+        openWebPage(url: url)
+    }
+    
+    private func openWebPage(url: URL?) {
         if let url = url {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
@@ -99,11 +114,6 @@ class RepositoriesTableViewController: UITableViewController, UITableViewDataSou
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-   
-        cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
-        UIView.animate(withDuration: 0.25, animations: {
-                cell.layer.transform = CATransform3DMakeScale(1,1,1)
-            })
         
         let lastSectionIndex = tableView.numberOfSections - 1
         let lastRowIndex = tableView.numberOfRows(inSection: lastSectionIndex) - 1
